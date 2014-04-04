@@ -1,0 +1,42 @@
+<div class="row">
+	<div class="col-md-12">
+		<div class="module">
+			<div class="heading">
+				<h1>Git - Code Review Process</h1>
+			</div>
+			<div class="module-content">
+
+				<h2>1. Clone the Project</h2>
+					<p>It is assumed that Git is installed, SSH Key sent to project lead and that you have navigated to the directory you wish to place Doug but have not yet began working on the framework.</p>
+					<pre><code>$ git clone git@gitlab.tk20.com:dboehm/framework.git</code></pre>
+				<hr>
+
+				<h2>2. Initialize Git</h2>
+					<p>This will tell Git that this directory should be tracked.</p>
+					<pre><code>$ cd framework</code></pre>
+					<p>Moves into the project directory</p>
+					<pre><code>$ git init</code></pre>
+					<pre><code>$ git add -A</code></pre> 
+					<pre><code>$ git commit -m "initial commit"</code></pre>
+				<hr>
+
+				<h2>3. Create a Local CodeReview Branch</h2>
+					<p>This isn't entirely necessary, but will help keeping active work and codereview work separate.</p>
+						<pre><code>$ git checkout -b codereview</code></pre>
+				<hr>
+
+				<h2>4. Pull Down The CodeReview Branch</h2>	
+					<p>This grabs the code meant to be reviewed, it is likely the most current code, but still in development and may be broken. Notes will have to be provided to specifically mention which code is to be reviewed.</p>
+						<pre><code>$ git pull origin codereview</code></pre>
+					<p>This will either say 'up to date' or will shift the framework to the codereview branch, in which case you'll see a number of updates on your terminal/bash shell.</p>
+				<hr>
+
+				<h2>5. Pushing CodeReview Edits Back Up To Master</h2>	
+				<p>Git/Gitlab will automatically track any changes the reviewer has made, so there is no need for individual note-taking or explanation.</p>
+					<pre><code>$ git push origin codereview</code></pre>
+					<p>'codereview' here isn't entirely necessary, but it's safer to explicitly tell Git which branch to push changes to. Once this step is finished, send the project lead an email and they will look over any changes and pull down your code if it's an improvement.</p>
+
+			</div>
+		</div>	
+	</div>	
+</div>

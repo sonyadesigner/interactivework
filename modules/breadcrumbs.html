@@ -1,0 +1,86 @@
+<ul class="breadcrumb">
+	<li><a href="#">Home</a></li>
+	<li><a href="#">Library</a></li>
+	<li class="active">Data</li>
+</ul>
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="module">
+			<div class="heading">
+				<h1>Breadcrumbs</h1>
+			</div>
+			<div class="module-content">
+				<div class="row">
+					<h2>Description</h2>
+						<p>This is a page that shows breadcrumbs. Breadcrumbs are one of, if the only, component that sits outside of a module.</p>
+					<hr>
+
+					<h2>Example</h2>
+					<ul class="breadcrumb">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Library</a></li>
+						<li class="active">Data</li>
+					</ul>
+					<hr>
+
+					<h2>Accessibility</h2>
+						<p>Must include active and focus styling. Could <code>role="breadcrumbs"</code> be useful?</p>
+					<hr>
+					
+					<h2>Markup:HTML</h2>	
+						<pre><code>&lt;ul class=&quot;breadcrumb&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Library&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;active&quot;&gt;Data&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-md-12&quot;&gt;
+    &lt;div class=&quot;module&quot;&gt;
+      ...
+    &lt;/div&gt; 
+  &lt;/div&gt; 
+&lt;/div&gt;</code></pre>
+					
+					<h2>Markup:CSS (.LESS)</h2>
+					<pre><code class="xljs css">ol.breadcrumb,
+ul.breadcrumb {
+	margin-bottom: 20px;
+	margin-top: 0;
+	margin-left: 10px;
+	list-style: none;
+	background-color: transparent;
+	border-radius: 0;
+	padding: 0;
+	a:link, 
+	a:visited, 
+	a:hover, 
+	a:active, 
+	li {
+		font-size: 10px;
+		font-weight: 300;
+		color:@gray2;
+		text-decoration: none;
+		line-height: 1em;
+	}
+    &gt; li.active {
+		font-size: 10px;
+		font-weight: 700;
+		color:@gray2;
+		text-decoration: none;
+	}
+}
+.breadcrumb &gt; li + li:before {
+	content:&quot;\003e&quot;; 
+}</code></pre>
+
+				<h2>Markup: JS</h2>
+					<p>There is no JavaScript used in breadcrumbs.</p>
+				<hr>
+
+				</div>
+			</div>
+		</div>	
+	</div>	
+</div>

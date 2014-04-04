@@ -1,0 +1,141 @@
+@import "lessmixins.less";
+
+div.modal {
+	div.modal-dialog {
+		div.modal-content {
+			border: 1px solid @gray1;
+			div.modal-header {
+				padding: 20px 20px 0 20px;
+				border-bottom: 0 none;
+				.close {
+					position: absolute;
+					top: 20px;
+					right: 20px;
+					margin: 0;
+					color: @gray2;
+					cursor: pointer;
+
+					[class^="icon-"], [class*=" icon-"] {
+						font-size: 1.1666em;
+						font-weight: bold;
+						color: @gray3;
+						.transition(100ms);
+						&:hover, &:active, &:focus {
+							color: @gray1;
+						}
+					}
+				}
+				h4 {
+					margin: 0;
+				}
+			}
+			div.modal-body {
+				margin-top: 20px;
+				padding: 2px 20px 0 20px;
+				border-bottom: 0 none;
+
+				p {
+					margin-bottom: 0;
+				}
+				/*for the circled X icon below file attachment buttons */
+				label ~ p [class^="icon-"],
+				input ~ p [class^="icon-"],
+				label ~ p [class*=" icon-"],
+				input ~ p [class*=" icon-"] {
+					margin-top: 10px;
+					font-size: 1.1666em;
+					color: @gray2;
+					position: relative;
+					top: 3px;
+					cursor: pointer;
+				}
+
+				.form-group {
+					margin-bottom: 20px;
+					.checkbox, .radio {
+						margin-top: 5px;
+						margin-bottom: 0;
+					}
+				}
+				.message-field {
+					width: 100%;
+					float: left;
+					clear: both;
+					border: 1px solid @gray2;
+					padding: 3px 5px 1px;
+					margin-bottom: 10px;
+					p {
+						float: left;
+						margin-bottom: 0;
+						margin-right: 20px;
+					}
+					> span.token {
+						float: left;
+						padding: 3px 3px 3px;
+						border: 1px solid @gray2;
+						color: @gray2;
+						font-size: 0.8333em;
+						line-height: 0;
+						vertical-align: middle;
+						margin-right: 5px;
+						[class*="icon-"], [class^=" icon-"] {
+							padding-left: 3px;
+							font-size: 0.8333em;
+							cursor: pointer;
+						}
+					}
+				}
+
+			}
+			div.modal-footer {
+				padding: 20px;
+				border-top: 0 none;
+/*				.btn + .btn {
+					margin-bottom: 5px;
+				}*/
+				hr {
+					margin-top: 0;
+				}
+			}
+		}
+	}
+}
+a.tip { cursor: pointer; }
+div.popover {
+	max-width: 400px;
+	.border-radius();
+	border-color: @gray3;
+	.drop-shadow(0,0,3px,1px, 0.05);
+	.popover-content {
+		float: left;
+	}
+	&.right .arrow {
+		border-right-color: @gray3;
+	}
+	p {
+		margin-bottom: 0;
+	}
+	ul {
+		list-style-type: none;
+		li {
+			list-style-type: none;
+			line-height: 1em;
+			a:link, a:visited {
+				color: @gray1;
+				padding: 5px 10px;
+				display: block;
+			}
+			a:active, a:hover, a:focus {
+				color: @gray1;
+				background: @gray3;
+			}
+		}
+	}
+	hr {
+		margin: 10px 0;
+	}
+	button {
+		margin: 5px 0;
+		width: 100%;
+	}
+}

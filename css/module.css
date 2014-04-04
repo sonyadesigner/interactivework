@@ -1,0 +1,412 @@
+/* #666666; */
+/* #a3a3a3; */
+/* #e6e6e6; */
+.flush {
+  margin: 0;
+  padding: 0;
+}
+/*mobile / tablet - all edit options are in dropdown*/
+div.module {
+  border-left: 10px solid #e6e6e6;
+  border-right: 10px solid #e6e6e6;
+  background: #ffffff;
+  margin-bottom: 20px;
+  float: left;
+  width: 100%;
+  min-width: 545px;
+  z-index: 0;
+  /* places a 10px padding on nested columns inside modules, unless they are full width */
+
+}
+div.module:after {
+  clear: both;
+}
+div.module [class^="col-"] + [class^="col-"],
+div.module [class^="col-"] + [class*=" col-"],
+div.module [class*=" col-"] + [class^="col-"],
+div.module [class*=" col-"] + [class*=" col-"] {
+  padding-left: 10px;
+}
+div.module [class="col-lg-12"],
+div.module [class*=" col-lg-12"],
+div.module [class="col-md-12"],
+div.module [class*=" col-md-12"],
+div.module [class="col-sm-12"],
+div.module [class*=" col-sm-12"],
+div.module [class="col-xs-12"],
+div.module [class*=" col-xs-12"] {
+  padding-left: 0 !important;
+}
+div.module div.module-content {
+  padding: 20px;
+  float: left;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+div.module div.heading {
+  position: relative;
+  background: #e65814;
+  float: left;
+  width: 100%;
+  z-index: 1;
+  /* editing-options */
+
+}
+div.module div.heading h1 {
+  max-width: 80%;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+div.module div.heading div.editing-options {
+  float: right;
+  width: auto;
+  max-width: 20%;
+  position: relative;
+}
+div.module div.heading div.editing-options div.module-menu-bar {
+  float: left;
+}
+div.module div.heading div.editing-options div.module-menu-bar > ul > li {
+  float: left;
+  list-style-type: none;
+  line-height: 1em;
+  padding: 7px 0;
+  background: transparent;
+  cursor: pointer;
+}
+div.module div.heading div.editing-options div.module-menu-bar > ul > li:hover,
+div.module div.heading div.editing-options div.module-menu-bar > ul > li:active {
+  background: #ff6a18;
+}
+div.module div.heading div.editing-options div.module-menu-bar > ul > li:first-child a:link,
+div.module div.heading div.editing-options div.module-menu-bar > ul > li:first-child a:visited,
+div.module div.heading div.editing-options div.module-menu-bar > ul > li:first-child [class^="icon-"],
+div.module div.heading div.editing-options div.module-menu-bar > ul > li:first-child [class*=" icon-"] {
+  border-left: 0 none;
+}
+div.module div.heading div.editing-options div.module-menu-bar > ul > li > a:link,
+div.module div.heading div.editing-options div.module-menu-bar > ul > li > a:visited,
+div.module div.heading div.editing-options div.module-menu-bar > ul > li > [class^="icon-"],
+div.module div.heading div.editing-options div.module-menu-bar > ul > li [class*=" icon-"] {
+  display: block;
+  padding: 0 10px;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  background: transparent;
+  color: #ffffff;
+  font-size: 12px;
+}
+div.module div.heading div.editing-options div.module-menu-bar > ul > li.primary {
+  display: none;
+}
+div.module div.heading div.editing-options div.module-menu-bar > ul > li.secondary {
+  display: none;
+}
+div.module div.heading div.editing-options div.module-menu-bar > ul > li.module-menu-trigger {
+  display: block;
+}
+div.module div.heading div.editing-options div.module-menu-bar > ul > li.module-menu-trigger [class^="icon-"],
+div.module div.heading div.editing-options div.module-menu-bar > ul > li.module-menu-trigger [class*=" icon-"] {
+  border-left: 0 none;
+}
+div.module div.heading div.editing-options div.module-menu-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  height: 0;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+}
+div.module div.heading div.editing-options div.module-menu-dropdown.show-menu {
+  height: auto;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+div.module div.heading div.editing-options div.module-menu-dropdown > ul {
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
+  margin: 0;
+  padding: 0;
+}
+div.module div.heading div.editing-options div.module-menu-dropdown > ul > li {
+  float: none;
+  list-style-type: none;
+  line-height: 1em;
+  padding: 0 10px;
+  background: #ffffff;
+  width: 100%;
+}
+div.module div.heading div.editing-options div.module-menu-dropdown > ul > li:hover,
+div.module div.heading div.editing-options div.module-menu-dropdown > ul > li:active {
+  background: #e6e6e6;
+}
+div.module div.heading div.editing-options div.module-menu-dropdown > ul > li:first-child a:link,
+div.module div.heading div.editing-options div.module-menu-dropdown > ul > li:first-child a:visited,
+div.module div.heading div.editing-options div.module-menu-dropdown > ul > li:first-child [class^="icon-"],
+div.module div.heading div.editing-options div.module-menu-dropdown > ul > li:first-child [class*=" icon-"] {
+  border-left: 0 none;
+  border-top: 0 none;
+}
+div.module div.heading div.editing-options div.module-menu-dropdown > ul > li > a:link,
+div.module div.heading div.editing-options div.module-menu-dropdown > ul > li a:visited,
+div.module div.heading div.editing-options div.module-menu-dropdown > ul > li [class^="icon-"],
+div.module div.heading div.editing-options div.module-menu-dropdown > ul > li [class*=" icon-"] {
+  display: block;
+  padding: 7px 0;
+  border-left: 0 none;
+  border-top: 1px solid #e6e6e6;
+  background: transparent;
+  color: #666666;
+  font-size: 12px;
+  cursor: pointer;
+}
+div.module div.heading div.editing-options div.module-menu-dropdown > ul > li > [class^="icon-"],
+div.module div.heading div.editing-options div.module-menu-dropdown > ul > li [class*=" icon-"] {
+  display: none;
+}
+div.module div.module-submit {
+  float: right;
+}
+div.module div.module-footer {
+  margin-top: 30px;
+}
+@media screen and (min-width: 960px) {
+  div.module div.heading h1 {
+    max-width: 50%;
+  }
+  div.module div.heading div.editing-options {
+    max-width: 50%;
+  }
+  div.module div.heading div.editing-options div.module-menu-bar > ul > li.primary {
+    display: block;
+  }
+  div.module div.heading div.editing-options div.module-menu-bar > ul > li.secondary {
+    display: none;
+  }
+  div.module div.heading div.editing-options div.module-menu-bar > ul > li.module-menu-trigger {
+    display: block;
+  }
+  div.module div.heading div.editing-options div.module-menu-bar > ul > li.module-menu-trigger [class^="icon-"],
+  div.module div.heading div.editing-options div.module-menu-bar > ul > li.module-menu-trigger [class*=" icon-"] {
+    font-size: 20px;
+    line-height: 1;
+    padding: 0 5px;
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  div.module div.heading div.editing-options div.module-menu-dropdown {
+    height: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    opacity: 0;
+  }
+  div.module div.heading div.editing-options div.module-menu-dropdown.show-menu {
+    height: auto;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
+  }
+  div.module div.heading div.editing-options div.module-menu-dropdown > ul > li.primary + .secondary a:link,
+  div.module div.heading div.editing-options div.module-menu-dropdown > ul > li.primary + .secondary a:visited,
+  div.module div.heading div.editing-options div.module-menu-dropdown > ul > li.primary + .secondary [class^="icon-"],
+  div.module div.heading div.editing-options div.module-menu-dropdown > ul > li.primary + .secondary [class*=" icon-"] {
+    border-top: 0 none;
+  }
+  div.module div.heading div.editing-options div.module-menu-dropdown > ul > li.primary {
+    display: none;
+  }
+  div.module div.heading div.editing-options div.module-menu-dropdown > ul > li.secondary {
+    display: block;
+  }
+  div.module div.heading div.editing-options div.module-menu-dropdown > ul > li.secondary.first a:link,
+  div.module div.heading div.editing-options div.module-menu-dropdown > ul > li.secondary.first a:visited,
+  div.module div.heading div.editing-options div.module-menu-dropdown > ul > li.secondary.first [class^="icon-"],
+  div.module div.heading div.editing-options div.module-menu-dropdown > ul > li.secondary.first [class*=" icon-"] {
+    border-top: 0 none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  div.module div.heading h1 {
+    max-width: 40%;
+  }
+  div.module div.heading div.editing-options {
+    max-width: 60%;
+  }
+  div.module div.heading div.editing-options div.module-menu-bar > ul > li.primary {
+    display: block;
+  }
+  div.module div.heading div.editing-options div.module-menu-bar > ul > li.secondary {
+    display: block;
+  }
+  div.module div.heading div.editing-options div.module-menu-bar > ul > li.module-menu-trigger {
+    display: none;
+  }
+  div.module div.heading div.editing-options div.module-menu-bar > ul > li.module-menu-trigger [class^="icon-"],
+  div.module div.heading div.editing-options div.module-menu-bar > ul > li.module-menu-trigger [class*=" icon-"] {
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  div.module div.heading div.editing-options div.module-menu-dropdown {
+    display: none;
+  }
+  div.module div.heading div.editing-options div.module-menu-dropdown > ul > li.primary {
+    display: none;
+  }
+  div.module div.heading div.editing-options div.module-menu-dropdown > ul > li.secondary {
+    display: block;
+  }
+  div.module div.heading div.editing-options div.module-menu-dropdown > ul > li.module-menu-trigger {
+    display: none;
+  }
+  div.module div.heading div.editing-options div.module-menu-dropdown > ul > li.module-menu-trigger [class^="icon-"],
+  div.module div.heading div.editing-options div.module-menu-dropdown > ul > li.module-menu-trigger [class*=" icon-"] {
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+  }
+}
+/*mobile / tablet -  half-width modules only have the dropdown menu */
+div.col-md-6 > div.module div.heading,
+div.col-sm-6 > div.module div.heading,
+div.col-lg-6 > div.module div.heading,
+div.col-xs-6 > div.module div.heading {
+  /* editing-options */
+
+}
+div.col-md-6 > div.module div.heading div.editing-options div.module-menu-dropdown,
+div.col-sm-6 > div.module div.heading div.editing-options div.module-menu-dropdown,
+div.col-lg-6 > div.module div.heading div.editing-options div.module-menu-dropdown,
+div.col-xs-6 > div.module div.heading div.editing-options div.module-menu-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  height: 0;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+}
+div.col-md-6 > div.module div.heading div.editing-options div.module-menu-dropdown.show-menu,
+div.col-sm-6 > div.module div.heading div.editing-options div.module-menu-dropdown.show-menu,
+div.col-lg-6 > div.module div.heading div.editing-options div.module-menu-dropdown.show-menu,
+div.col-xs-6 > div.module div.heading div.editing-options div.module-menu-dropdown.show-menu {
+  height: auto;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+div.col-md-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul,
+div.col-sm-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul,
+div.col-lg-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul,
+div.col-xs-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul {
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
+  margin: 0;
+  padding: 0;
+}
+div.col-md-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li,
+div.col-sm-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li,
+div.col-lg-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li,
+div.col-xs-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li {
+  float: none;
+  list-style-type: none;
+  line-height: 1em;
+  padding: 0 10px;
+  background: #ffffff;
+  width: 100%;
+}
+div.col-md-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li:hover,
+div.col-sm-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li:hover,
+div.col-lg-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li:hover,
+div.col-xs-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li:hover,
+div.col-md-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li:active,
+div.col-sm-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li:active,
+div.col-lg-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li:active,
+div.col-xs-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li:active {
+  background: #e6e6e6;
+}
+div.col-md-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li:first-child a:link,
+div.col-sm-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li:first-child a:link,
+div.col-lg-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li:first-child a:link,
+div.col-xs-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li:first-child a:link,
+div.col-md-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li:first-child a:visited,
+div.col-sm-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li:first-child a:visited,
+div.col-lg-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li:first-child a:visited,
+div.col-xs-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li:first-child a:visited,
+div.col-md-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li:first-child [class^="icon-"],
+div.col-sm-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li:first-child [class^="icon-"],
+div.col-lg-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li:first-child [class^="icon-"],
+div.col-xs-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li:first-child [class^="icon-"],
+div.col-md-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li:first-child [class*=" icon-"],
+div.col-sm-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li:first-child [class*=" icon-"],
+div.col-lg-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li:first-child [class*=" icon-"],
+div.col-xs-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li:first-child [class*=" icon-"] {
+  border-left: 0 none;
+  border-top: 0 none;
+}
+div.col-md-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li > a:link,
+div.col-sm-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li > a:link,
+div.col-lg-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li > a:link,
+div.col-xs-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li > a:link,
+div.col-md-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li a:visited,
+div.col-sm-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li a:visited,
+div.col-lg-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li a:visited,
+div.col-xs-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li a:visited,
+div.col-md-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li [class^="icon-"],
+div.col-sm-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li [class^="icon-"],
+div.col-lg-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li [class^="icon-"],
+div.col-xs-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li [class^="icon-"],
+div.col-md-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li [class*=" icon-"],
+div.col-sm-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li [class*=" icon-"],
+div.col-lg-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li [class*=" icon-"],
+div.col-xs-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li [class*=" icon-"] {
+  display: block;
+  padding: 7px 0;
+  border-left: 0 none;
+  border-top: 1px solid #e6e6e6;
+  background: transparent;
+  color: #666666;
+  font-size: 12px;
+  cursor: pointer;
+}
+div.col-md-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li > [class^="icon-"],
+div.col-sm-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li > [class^="icon-"],
+div.col-lg-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li > [class^="icon-"],
+div.col-xs-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li > [class^="icon-"],
+div.col-md-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li [class*=" icon-"],
+div.col-sm-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li [class*=" icon-"],
+div.col-lg-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li [class*=" icon-"],
+div.col-xs-6 > div.module div.heading div.editing-options div.module-menu-dropdown > ul > li [class*=" icon-"] {
+  display: none;
+}
+/*remove the 10px padding from consecutive medium columns when they collapse*/
+@media screen and (max-width: 960px) {
+  div.module [class^="col-md"] + [class^="col-md"],
+  div.module [class^="col-md"] + [class*=" col-md"],
+  div.module [class*=" col-md"] + [class^="col-md"],
+  div.module [class*=" col-md"] + [class*=" col-md"] {
+    padding-left: 0;
+  }
+  div.module [class="col-lg-12"],
+  div.module [class*=" col-lg-12"],
+  div.module [class="col-md-12"],
+  div.module [class*=" col-md-12"] {
+    padding-left: 0 !important;
+  }
+}
+/*remove the 10px padding from consecutive small columns when they collapse*/
+@media screen and (max-width: 640px) {
+  div.module [class^="col-sm"] + [class^="col-sm"],
+  div.module [class^="col-sm"] + [class*=" col-sm"],
+  div.module [class*=" col-sm"] + [class^="col-sm"],
+  div.module [class*=" col-sm"] + [class*=" col-sm"] {
+    padding-left: 0;
+  }
+  div.module [class="col-lg-12"],
+  div.module [class*=" col-lg-12"],
+  div.module [class="col-md-12"],
+  div.module [class*=" col-md-12"] {
+    padding-left: 0 !important;
+  }
+}

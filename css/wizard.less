@@ -1,0 +1,131 @@
+@import "lessmixins.less";
+
+@svgw: 130px;
+@svgh: 27px;
+div.wizard-steps {
+	float: left;
+	padding-left: 53px;
+	margin-bottom: 20px;
+	> a.step {
+		float: left;
+		padding: 3px 15px ;
+		margin-right: 67px;
+		margin-left: -40px;
+		margin-bottom: 8px;
+		height: @svgh;
+		text-align: center;
+		position: relative;
+		> span {
+			width: 22px; 		
+			height: @svgh;
+			float: left;
+			position: absolute;
+			top: -1px;
+			overflow: hidden;
+		}
+
+		&.previous {
+			border-top: 1px solid @green;
+			border-bottom: 1px solid @green;
+			background: @white;
+			p.step-number {
+				display: none;
+				color: @green;
+			}
+			p.step-title {
+				display: block;
+				color: @green;
+			}
+		}
+
+		&.current {
+			border-top: 1px solid @green;
+			border-bottom: 1px solid @green;
+			background: @green;
+			p.step-number {
+				display: none;
+				color: @white;
+			}
+			p.step-title {
+				display: block;
+				color: @white;
+			}
+		}
+
+		&.next {
+			border-top: 1px solid @gray2;
+			border-bottom: 1px solid @gray2;
+			background: @white;
+			p.step-number {
+				display: none;
+				color: @gray2;
+			}
+			p.step-title {
+				display: block;
+				color: @gray2;
+			}
+		}
+	}
+
+	span.prev-left {
+		right:100%;
+		background-image: url('../assets/ui/wizard-steps.png');
+		background-repeat: no-repeat;
+		background-size: @svgw @svgh;
+		background-position: 6px 0;
+	}
+	span.prev-right {
+		left: 100%;
+		background-image: url('../assets/ui/wizard-steps.png');
+		background-repeat: no-repeat;
+		background-size: @svgw @svgh;
+		background-position: -23px 0;
+	}
+	span.current-left {
+		right:100%;
+		background-image: url('../assets/ui/wizard-steps.png');
+		background-repeat: no-repeat;
+		background-size: @svgw @svgh;
+		background-position: -41px 0;
+	}
+	span.current-right {
+		left: 100%;
+		background-image: url('../assets/ui/wizard-steps.png');
+		background-repeat: no-repeat;
+		background-size: @svgw @svgh;
+		background-position: -69px 0;
+	}
+	span.next-left {
+		right:100%;
+		background-image: url('../assets/ui/wizard-steps.png');
+		background-repeat: no-repeat;
+		background-size: @svgw @svgh;
+		background-position: -87px 0;
+	}
+	span.next-right {
+		left: 100%;		
+		background-image: url('../assets/ui/wizard-steps.png');
+		background-repeat: no-repeat;
+		background-size: @svgw @svgh;
+		background-position: -113px 0;
+	}
+}
+
+@media screen and (max-width: 1000px){
+	div.wizard-steps {
+		> a.step {
+			> span {
+				
+			}
+			&.next, &.previous, &.current {
+				p.step-number {
+					display: block;
+				}
+				p.step-title {
+					display: none;
+				}
+			}
+			
+		}
+	}
+}

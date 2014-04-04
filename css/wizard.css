@@ -1,0 +1,123 @@
+/* #666666; */
+/* #a3a3a3; */
+/* #e6e6e6; */
+.flush {
+  margin: 0;
+  padding: 0;
+}
+div.wizard-steps {
+  float: left;
+  padding-left: 53px;
+  margin-bottom: 20px;
+}
+div.wizard-steps > a.step {
+  float: left;
+  padding: 3px 15px ;
+  margin-right: 67px;
+  margin-left: -40px;
+  margin-bottom: 8px;
+  height: 27px;
+  text-align: center;
+  position: relative;
+}
+div.wizard-steps > a.step > span {
+  width: 22px;
+  height: 27px;
+  float: left;
+  position: absolute;
+  top: -1px;
+  overflow: hidden;
+}
+div.wizard-steps > a.step.previous {
+  border-top: 1px solid #93ca58;
+  border-bottom: 1px solid #93ca58;
+  background: #ffffff;
+}
+div.wizard-steps > a.step.previous p.step-number {
+  display: none;
+  color: #93ca58;
+}
+div.wizard-steps > a.step.previous p.step-title {
+  display: block;
+  color: #93ca58;
+}
+div.wizard-steps > a.step.current {
+  border-top: 1px solid #93ca58;
+  border-bottom: 1px solid #93ca58;
+  background: #93ca58;
+}
+div.wizard-steps > a.step.current p.step-number {
+  display: none;
+  color: #ffffff;
+}
+div.wizard-steps > a.step.current p.step-title {
+  display: block;
+  color: #ffffff;
+}
+div.wizard-steps > a.step.next {
+  border-top: 1px solid #a3a3a3;
+  border-bottom: 1px solid #a3a3a3;
+  background: #ffffff;
+}
+div.wizard-steps > a.step.next p.step-number {
+  display: none;
+  color: #a3a3a3;
+}
+div.wizard-steps > a.step.next p.step-title {
+  display: block;
+  color: #a3a3a3;
+}
+div.wizard-steps span.prev-left {
+  right: 100%;
+  background-image: url('../assets/ui/wizard-steps.png');
+  background-repeat: no-repeat;
+  background-size: 130px 27px;
+  background-position: 6px 0;
+}
+div.wizard-steps span.prev-right {
+  left: 100%;
+  background-image: url('../assets/ui/wizard-steps.png');
+  background-repeat: no-repeat;
+  background-size: 130px 27px;
+  background-position: -23px 0;
+}
+div.wizard-steps span.current-left {
+  right: 100%;
+  background-image: url('../assets/ui/wizard-steps.png');
+  background-repeat: no-repeat;
+  background-size: 130px 27px;
+  background-position: -41px 0;
+}
+div.wizard-steps span.current-right {
+  left: 100%;
+  background-image: url('../assets/ui/wizard-steps.png');
+  background-repeat: no-repeat;
+  background-size: 130px 27px;
+  background-position: -69px 0;
+}
+div.wizard-steps span.next-left {
+  right: 100%;
+  background-image: url('../assets/ui/wizard-steps.png');
+  background-repeat: no-repeat;
+  background-size: 130px 27px;
+  background-position: -87px 0;
+}
+div.wizard-steps span.next-right {
+  left: 100%;
+  background-image: url('../assets/ui/wizard-steps.png');
+  background-repeat: no-repeat;
+  background-size: 130px 27px;
+  background-position: -113px 0;
+}
+@media screen and (max-width: 1000px) {
+  div.wizard-steps > a.step.next p.step-number,
+  div.wizard-steps > a.step.previous p.step-number,
+  div.wizard-steps > a.step.current p.step-number {
+    display: block;
+  }
+  div.wizard-steps > a.step.next p.step-title,
+  div.wizard-steps > a.step.previous p.step-title,
+  div.wizard-steps > a.step.current p.step-title {
+    display: none;
+  }
+}

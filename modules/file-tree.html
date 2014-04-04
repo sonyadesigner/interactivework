@@ -1,0 +1,414 @@
+<div class="row">
+	<div class="col-md-12">
+		<div class="module">
+			<div class="heading"><h1>File Tree Structure</h1></div>
+
+			<div class="module-content">
+				<h2>Description</h2>
+				<p>File Tree Lines/Files/Links are styled based on the level they are nested. First tier is bold, second tier is normal paragraph style text, and third, fourth, etc tiers are normal italicized text.</p>
+
+				<hr>
+
+                <h2>Example</h2>
+                <div class="file-tree">
+                    <div class="file-tree-all">
+                        <p class="ft-trigger"><a href="#" class="ft-expand-all" tab-index="1">Expand All</a> <a href="#" class="ft-collapse-all" tab-index="2">Collapse All</a></p>
+                    </div>
+                    
+                    <div class="panel-group" id="ft-main">
+                    <div class="panel panel-default">
+                    <a class="panel-title panel-heading">
+                        <div class="form-group">
+                        <div class="checkbox">
+                            <input type="checkbox" id="checkbox01" name="options" value="checkbox01" tab-index="3">
+                            <label for="checkbox01" tab-index="4">First Tier Without Nested Files or Links</label> 
+                        </div>
+                        </div>  
+                    </a>
+                    </div>  
+
+                    <div class="panel panel-default">
+                    <span class="icon-arrow-right collapsed" data-toggle="collapse" href="#link-1"></span>
+                    <a class="panel-title panel-heading">
+                        <div class="form-group">
+                        <div class="checkbox">
+                            <input type="checkbox" id="checkbox1" name="options" value="checkbox1">
+                            <label for="checkbox1">First Tier With Nested Files</label> 
+                        </div>
+                        </div>  
+                    </a>    
+
+                        <div class="panel-group collapse" id="link-1">
+                        <div class="panel panel-default">
+                        <span class="icon-arrow-right collapsed" data-toggle="collapse" href="#link-1-1"></span>
+                        <a class="panel-title panel-heading">
+                            <div class="form-group">
+                            <div class="checkbox">
+                                <input type="checkbox" id="checkbox2" name="options" value="checkbox2">
+                                <label for="checkbox2">Second Tier With Nested Files</label> 
+                            </div>
+                            </div>
+                        </a>
+
+                            <div class="panel-group collapse" id="link-1-1">
+                            <div class="panel panel-default">
+                            <a class="panel-title panel-heading">
+                                <div class="form-group">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="checkbox3" name="options" value="checkbox3">
+                                    <label for="checkbox3">Third Tier 1</label> 
+                                </div>
+                                </div>
+                            </a>
+                            </div>
+                            <div class="panel panel-default">
+                            <a class="panel-title panel-heading">
+                                <div class="form-group">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="checkbox4" name="options" value="checkbox4">
+                                    <label for="checkbox4">Third Tier 2</label> 
+                                </div>
+                                </div>
+                            </a>
+                            </div>
+                            <div class="panel panel-default">
+                            <a class="panel-title panel-heading">
+                                <div class="form-group">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="checkbox5" name="options" value="checkbox5">
+                                    <label for="checkbox5">Third Tier 3</label> 
+                                </div>
+                                </div>
+                            </a>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                        <a class="panel-title panel-heading">
+                            <div class="form-group">
+                            <div class="checkbox">
+                                <input type="checkbox" id="checkbox6" name="options" value="checkbox6">
+                                <label for="checkbox6">Second Tier 2</label> 
+                            </div>
+                            </div>
+                        </a>
+                        </div>
+                        </div>
+                
+                    <div class="panel panel-default">
+                    <span class="icon-arrow-right collapsed" data-toggle="collapse" href="#link-2"></span>
+                    <a class="panel-title panel-heading">
+                        <div class="form-group">
+                        <div class="checkbox">
+                            <input type="checkbox" id="checkbox1-2" name="options" value="checkbox1-2">
+                            <label for="checkbox1-2">First Tier 3</label> 
+                        </div>
+                        </div>  
+                    </a>    
+                        <div class="panel-group collapse" id="link-2">
+                        <div class="panel panel-default">
+                        <span class="icon-arrow-right collapsed" data-toggle="collapse" href="#link-2-1"></span>
+                        <a class="panel-title panel-heading">
+                            <div class="form-group">
+                            <div class="checkbox">
+                                <input type="checkbox" id="checkbox2-2" name="options" value="checkbox2-2">
+                                <label for="checkbox2-2">Second Tier 1</label> 
+                            </div>
+                            </div>
+                        </a>
+                            <div class="panel-group collapse" id="link-2-1">
+                            <div class="panel panel-default">
+                            <span class="icon-arrow-right collapsed" data-toggle="collapse" href="#link-2-1-1"></span>
+                            <a class="panel-title panel-heading">
+                                <div class="form-group">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="checkbox3-2" name="options" value="checkbox3-2">
+                                    <label for="checkbox3-2">Third Tier With Nested Files/Links</label> 
+                                </div>
+                                </div>
+                            </a>
+                                <div class="panel-group collapse" id="link-2-1-1">
+                                <div class="panel panel-default">
+                                <a class="panel-title panel-heading">
+                                    <div class="form-group">
+                                    <div class="checkbox">
+                                        <input type="checkbox" id="checkbox4-21" name="options" value="checkbox4-21">
+                                        <label for="checkbox4-21">Fourth Tier To Show Continuation of Third Tier Styling</label> 
+                                    </div>
+                                    </div>
+                                </a>
+                                </div>
+                                <div class="panel panel-default">
+                                <a class="panel-title panel-heading">
+                                    <div class="form-group">
+                                    <div class="checkbox">
+                                        <input type="checkbox" id="checkbox4-3-2" name="options" value="checkbox4-3-2">
+                                        <label for="checkbox4-3-2">Fourth Tier 2</label> 
+                                    </div>
+                                    </div>
+                                </a>
+                                </div>
+                                <div class="panel panel-default">
+                                <a class="panel-title panel-heading">
+                                    <div class="form-group">
+                                    <div class="checkbox">
+                                        <input type="checkbox" id="checkbox4-4-0" name="options" value="checkbox4-4-0">
+                                        <label for="checkbox4-4-0">Fourth Tier 3</label> 
+                                    </div>
+                                    </div>
+                                </a>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                            <a class="panel-title panel-heading">
+                                <div class="form-group">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="checkbox4-3-0" name="options" value="checkbox4-3-0">
+                                    <label for="checkbox4-3-0">Third Tier 2</label> 
+                                </div>
+                                </div>
+                            </a>
+                            </div>
+                            <div class="panel panel-default">
+                            <a class="panel-title panel-heading">
+                                <div class="form-group">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="checkbox5-2" name="options" value="checkbox5-2">
+                                    <label for="checkbox5-2">Third Tier 3</label> 
+                                </div>
+                                </div>
+                            </a>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    </div> <!-- /ft-main -->
+                </div>  <!-- /file-tree -->
+
+                <hr>
+
+				<h2>Accessibility</h2>
+				<p>Not really sure how to make these accessible.</p>
+			
+				<hr>
+
+				<h2>Markup</h2>
+				<pre><code class="hljs html">&lt;div class=&quot;file-tree&quot;&gt;
+  &lt;div class=&quot;file-tree-all&quot;&gt;&lt;p class=&quot;ft-trigger&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;ft-expand-all&quot;&gt;Expand All&lt;/a&gt; &lt;a href=&quot;#&quot; class=&quot;ft-collapse-all&quot;&gt;Collapse All&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
+
+  &lt;div class=&quot;panel-group&quot; id=&quot;ft-main&quot;&gt;
+
+    &lt;!-- First Tier --&gt;
+    &lt;div class=&quot;panel panel-default&quot;&gt;
+    &lt;a class=&quot;panel-title panel-heading&quot;&gt;
+    &lt;div class=&quot;form-group&quot;&gt;
+    &lt;div class=&quot;checkbox&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;checkbox01&quot; name=&quot;options&quot; value=&quot;checkbox01&quot;&gt;
+    &lt;label for=&quot;checkbox01&quot;&gt;First Tier Without Nested Files or Links&lt;/label&gt; 
+    &lt;/div&gt;
+    &lt;/div&gt; 
+    &lt;/a&gt;
+    &lt;!-- Nested Lines Would Be Placed Here. --&gt;
+    &lt;/div&gt; 
+    
+    &lt;!-- First Tier --&gt;
+    &lt;div class=&quot;panel panel-default&quot;&gt;
+    &lt;i class=&quot;icon-arrow-right collapsed&quot; data-toggle=&quot;collapse&quot; href=&quot;#link-1&quot;&gt;&lt;/i&gt;
+    &lt;a class=&quot;panel-title panel-heading&quot;&gt;
+    &lt;div class=&quot;form-group&quot;&gt;
+    &lt;div class=&quot;checkbox&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;checkbox1&quot; name=&quot;options&quot; value=&quot;checkbox1&quot;&gt;
+    &lt;label for=&quot;checkbox1&quot;&gt;First Tier With Nested Files&lt;/label&gt; 
+    &lt;/div&gt;
+    &lt;/div&gt; 
+    &lt;/a&gt; 
+			
+        &lt;!-- Second Tier --&gt;
+        &lt;div class=&quot;panel-group collapse&quot; id=&quot;link-1&quot;&gt;
+        &lt;div class=&quot;panel panel-default&quot;&gt;
+        &lt;i class=&quot;icon-arrow-right collapsed&quot; data-toggle=&quot;collapse&quot; href=&quot;#link-1-1&quot;&gt;&lt;/i&gt;
+        &lt;a class=&quot;panel-title panel-heading&quot;&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+        &lt;div class=&quot;checkbox&quot;&gt;
+        &lt;input type=&quot;checkbox&quot; id=&quot;checkbox2&quot; name=&quot;options&quot; value=&quot;checkbox2&quot;&gt;
+        &lt;label for=&quot;checkbox2&quot;&gt;Second Tier With Nested Files&lt;/label&gt; 
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/a&gt;
+
+            &lt;!-- Third Tier --&gt;
+            &lt;div class=&quot;panel-group collapse&quot; id=&quot;link-1-1&quot;&gt;
+            &lt;div class=&quot;panel panel-default&quot;&gt;
+            &lt;a class=&quot;panel-title panel-heading&quot;&gt;
+            &lt;div class=&quot;form-group&quot;&gt;
+            &lt;div class=&quot;checkbox&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; id=&quot;checkbox3&quot; name=&quot;options&quot; value=&quot;checkbox3&quot;&gt;
+            &lt;label for=&quot;checkbox3&quot;&gt;Third Tier 1&lt;/label&gt; 
+            &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;/a&gt;
+            &lt;/div&gt;
+            
+            &lt;!-- Third Tier --&gt;
+            &lt;div class=&quot;panel panel-default&quot;&gt;
+            &lt;a class=&quot;panel-title panel-heading&quot;&gt;
+            &lt;div class=&quot;form-group&quot;&gt;
+            &lt;div class=&quot;checkbox&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; id=&quot;checkbox4&quot; name=&quot;options&quot; value=&quot;checkbox4&quot;&gt;
+            &lt;label for=&quot;checkbox4&quot;&gt;Third Tier 2&lt;/label&gt; 
+            &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;/a&gt;
+            &lt;/div&gt;
+            
+            &lt;!-- Third Tier --&gt;
+            &lt;div class=&quot;panel panel-default&quot;&gt;
+            &lt;a class=&quot;panel-title panel-heading&quot;&gt;
+            &lt;div class=&quot;form-group&quot;&gt;
+            &lt;div class=&quot;checkbox&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; id=&quot;checkbox5&quot; name=&quot;options&quot; value=&quot;checkbox5&quot;&gt;
+            &lt;label for=&quot;checkbox5&quot;&gt;Third Tier 3&lt;/label&gt; 
+            &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;/a&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt; 
+        &lt;/div&gt; 
+
+        &lt;!-- Second Tier --&gt;
+        &lt;div class=&quot;panel panel-default&quot;&gt;
+        &lt;a class=&quot;panel-title panel-heading&quot;&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+        &lt;div class=&quot;checkbox&quot;&gt;
+        &lt;input type=&quot;checkbox&quot; id=&quot;checkbox6&quot; name=&quot;options&quot; value=&quot;checkbox6&quot;&gt;
+        &lt;label for=&quot;checkbox6&quot;&gt;Second Tier 2&lt;/label&gt; 
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;!-- First Tier --&gt;
+    &lt;div class=&quot;panel panel-default&quot;&gt;
+    &lt;i class=&quot;icon-arrow-right collapsed&quot; data-toggle=&quot;collapse&quot; href=&quot;#link-2&quot;&gt;&lt;/i&gt;
+    &lt;a class=&quot;panel-title panel-heading&quot;&gt;
+    &lt;div class=&quot;form-group&quot;&gt;
+    &lt;div class=&quot;checkbox&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;checkbox1-2&quot; name=&quot;options&quot; value=&quot;checkbox1-2&quot;&gt;
+    &lt;label for=&quot;checkbox1-2&quot;&gt;First Tier 3&lt;/label&gt; 
+    &lt;/div&gt;
+    &lt;/div&gt; 
+    &lt;/a&gt; 
+
+        &lt;!-- Second Tier --&gt;
+        &lt;div class=&quot;panel-group collapse&quot; id=&quot;link-2&quot;&gt;
+        &lt;div class=&quot;panel panel-default&quot;&gt;
+        &lt;i class=&quot;icon-arrow-right collapsed&quot; data-toggle=&quot;collapse&quot; href=&quot;#link-2-1&quot;&gt;&lt;/i&gt;
+        &lt;a class=&quot;panel-title panel-heading&quot;&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+        &lt;div class=&quot;checkbox&quot;&gt;
+        &lt;input type=&quot;checkbox&quot; id=&quot;checkbox2-2&quot; name=&quot;options&quot; value=&quot;checkbox2-2&quot;&gt;
+        &lt;label for=&quot;checkbox2-2&quot;&gt;Second Tier 1&lt;/label&gt; 
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/a&gt;
+
+            &lt;!-- Third Tier --&gt;
+            &lt;div class=&quot;panel-group collapse&quot; id=&quot;link-2-1&quot;&gt;
+            &lt;div class=&quot;panel panel-default&quot;&gt;
+            &lt;i class=&quot;icon-arrow-right collapsed&quot; data-toggle=&quot;collapse&quot; href=&quot;#link-2-1-1&quot;&gt;&lt;/i&gt;
+            &lt;a class=&quot;panel-title panel-heading&quot;&gt;
+            &lt;div class=&quot;form-group&quot;&gt;
+            &lt;div class=&quot;checkbox&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; id=&quot;checkbox3-2&quot; name=&quot;options&quot; value=&quot;checkbox3-2&quot;&gt;
+            &lt;label for=&quot;checkbox3-2&quot;&gt;Third Tier With Nested Files/Links&lt;/label&gt; 
+            &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;/a&gt;
+
+                &lt;!-- Fourth Tier --&gt;
+                &lt;div class=&quot;panel-group collapse&quot; id=&quot;link-2-1-1&quot;&gt;
+                &lt;div class=&quot;panel panel-default&quot;&gt;
+                &lt;a class=&quot;panel-title panel-heading&quot;&gt;
+                &lt;div class=&quot;form-group&quot;&gt;
+                &lt;div class=&quot;checkbox&quot;&gt;
+                &lt;input type=&quot;checkbox&quot; id=&quot;checkbox4-21&quot; name=&quot;options&quot; value=&quot;checkbox4-21&quot;&gt;
+                &lt;label for=&quot;checkbox4-21&quot;&gt;Fourth Tier To Show Continuation of Third Tier Styling&lt;/label&gt; 
+                &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;/a&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Fourth Tier --&gt;
+                &lt;div class=&quot;panel panel-default&quot;&gt;
+                &lt;a class=&quot;panel-title panel-heading&quot;&gt;
+                &lt;div class=&quot;form-group&quot;&gt;
+                &lt;div class=&quot;checkbox&quot;&gt;
+                &lt;input type=&quot;checkbox&quot; id=&quot;checkbox4-3-2&quot; name=&quot;options&quot; value=&quot;checkbox4-3-2&quot;&gt;
+                &lt;label for=&quot;checkbox4-3-2&quot;&gt;Fourth Tier 2&lt;/label&gt; 
+                &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;/a&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Fourth Tier --&gt;
+                &lt;div class=&quot;panel panel-default&quot;&gt;
+                &lt;a class=&quot;panel-title panel-heading&quot;&gt;
+                &lt;div class=&quot;form-group&quot;&gt;
+                &lt;div class=&quot;checkbox&quot;&gt;
+                &lt;input type=&quot;checkbox&quot; id=&quot;checkbox4-4-0&quot; name=&quot;options&quot; value=&quot;checkbox4-4-0&quot;&gt;
+                &lt;label for=&quot;checkbox4-4-0&quot;&gt;Fourth Tier 3&lt;/label&gt; 
+                &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Third Tier --&gt;
+            &lt;div class=&quot;panel panel-default&quot;&gt;
+            &lt;a class=&quot;panel-title panel-heading&quot;&gt;
+            &lt;div class=&quot;form-group&quot;&gt;
+            &lt;div class=&quot;checkbox&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; id=&quot;checkbox4-3-0&quot; name=&quot;options&quot; value=&quot;checkbox4-3-0&quot;&gt;
+            &lt;label for=&quot;checkbox4-3-0&quot;&gt;Third Tier 2&lt;/label&gt; 
+            &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;/a&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Third Tier --&gt;
+            &lt;div class=&quot;panel panel-default&quot;&gt;
+            &lt;a class=&quot;panel-title panel-heading&quot;&gt;
+            &lt;div class=&quot;form-group&quot;&gt;
+            &lt;div class=&quot;checkbox&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; id=&quot;checkbox5-2&quot; name=&quot;options&quot; value=&quot;checkbox5-2&quot;&gt;
+            &lt;label for=&quot;checkbox5-2&quot;&gt;Third Tier 3&lt;/label&gt; 
+            &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt; &lt;!-- /ft-main --&gt;
+&lt;/div&gt; &lt;!-- /file-tree --&gt;</code></pre>
+			
+            <h2>Markup:CSS</h2>
+            <pre><code> ... </code></pre>
+
+            <h2>Markup:JavaScript</h2>
+            <pre><code> ... </code></pre>
+            <hr>
+				
+		</div>
+	</div>		
+</div>
+
+

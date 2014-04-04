@@ -1,0 +1,86 @@
+@import 'lessmixins.less';
+h2, h3, h4, h5, h6, p, ul, ol, li, strong, em, .strikethrough, td, small, * {
+	color: @gray1;
+	font-family: @font-stack;
+}
+h1 {
+	float: left;
+	color: @white;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	padding: 5px 10px;
+	font-weight: 400;
+	margin: 0;
+}
+h2, h3, h4, h5, strong { font-weight: 700; margin: 0;}
+b { font-weight: 600; }
+h2 { font-size: 1.3333em; margin-bottom: 20px; } 
+h3 { font-size: 1em; margin-bottom: 10px; color: @gray2; text-transform: uppercase;}
+h4 { font-size: 1.5em; margin-bottom: 10px;}
+h5 { font-size: 1.3333em; margin-bottom: 10px;}
+h6 { font-size: 1em; font-weight: 400; color: @gray2;}
+p,input, label, textarea, button, button.btn, select,
+.form-control, .control-label, thead, td, table, tr {
+	font-size: 1em;
+	line-height: 20px;
+	font-weight: 400;
+	.user-select(auto);
+}
+small {
+	font-size: 0.75em;
+	line-height: 15px;
+	font-weight: 300;
+}
+em { font-style: italic; }
+.strikethrough { text-decoration: line-through; }
+a:link, a:visited {
+	color: @link;
+	text-decoration: none;
+	&.link-cancel,
+	&.link-discard,
+	&.link-clear {
+		color: @link-cancel;
+		text-decoration: underline;
+	}
+}
+a:hover, a:active {
+	color: @link;
+	text-decoration: none;
+}
+a:focus {
+	/*outline: none !important;*/
+}
+p > a:link, a:visited {
+	color: @link;
+	text-decoration: none;
+}
+p > a.btn {
+	text-decoration: none;
+}
+ul, ol {
+	margin: 0;
+	padding: 0;
+	list-style-position:inside;
+	li {
+		font-size: 1em;
+		line-height: 26px;
+		font-weight: 400;
+	}	
+} 
+
+hr {
+	margin: 20px 0;
+	border-top: 1px solid @gray3;
+}
+[class^="icon-"], [class*=" icon-"] {
+	color: @gray2;
+	font-size: 1.1666em;
+}
+.badge {
+	position: relative;
+	background: @gray2;
+	color: @white;
+	padding: 0 5px;
+	margin-right: 5px;
+	.border-radius(100%);
+}

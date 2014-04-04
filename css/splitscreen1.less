@@ -1,0 +1,31 @@
+@import 'http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css';
+
+#splitscreen {
+    width: 100%;
+    font-size: 0;
+    position: relative;
+    float: left;
+    .box-sizing();
+}
+.resizable { 
+    .box-sizing();
+    width: 50%;
+    min-width: 20%;
+    max-width: 79%;
+    padding: 20px;
+    display: inline-block;
+    font-size: 1.1666em;
+    float: left;
+}
+.ui-resizable-e { 
+    cursor: move; 
+    width: 10px; 
+    top: 0; 
+    bottom: 0; 
+    position: absolute;
+    background-color: @gray3;
+    .transition(150ms);
+    &:hover {
+    	background-color: @gray2;
+    }
+}

@@ -1,0 +1,59 @@
+<div class="row">
+	<div class="col-md-12 col-sm-12">
+		<div class="module">
+			<div class="heading">
+				<h1>Tabs</h1>
+			</div>
+			<div class="module-content">
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#tab-page-one" data-toggle="tab" tab-index="1">Basic Usage</a></li>
+					<li><a href="#tab-page-two" data-toggle="tab" tab-index="2">Markup</a></li>
+					<li><a href="#tab-page-three" data-toggle="tab" tab-index="3">Tab 3</a></li>
+					<li><a href="#tab-page-four" data-toggle="tab" tab-index="4">Tab 4</a></li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane fade active in" id="tab-page-one">
+						<h2>Basic Usage</h2>
+						<p>Tabbed pages such as this should ONLY be placed full width rows, i.e. <code>&lt;div class='col-md-12 col-sm-12'&gt;</code>. If the tabs perform a line-wrap, the functionality becomes confusing. Please attempt to give shorter tab names for this same reason.</p>
+						<p>To have a tab displayed by default, give the associated <code>li</code> tag a class of <code>active</code> and the <code>div</code> containing the content classes of <code>active in</code>.</p>
+					</div>
+					<div class="tab-pane fade" id="tab-page-two">
+						<h2>Markup</h2>
+						<p><pre><code>&lt;ul class=&quot;nav nav-tabs&quot;&gt;
+  &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#tab-page-one&quot; data-toggle=&quot;tab&quot; tab-index=&quot;1&quot;&gt;Basic Usage&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#tab-page-two&quot; data-toggle=&quot;tab&quot; tab-index=&quot;2&quot;&gt;Markup&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#tab-page-three&quot; data-toggle=&quot;tab&quot; tab-index=&quot;3&quot;&gt;Tab 3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#tab-page-four&quot; data-toggle=&quot;tab&quot; tab-index=&quot;4&quot;&gt;Tab 4&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;tab-content&quot;&gt;
+  &lt;div class=&quot;tab-pane fade active in&quot; id=&quot;tab-page-one&quot;&gt;
+    &lt;h2&gt;Basic Usage&lt;/h2&gt;
+    &lt;p&gt;Tab One Content Goes Here&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;tab-pane fade&quot; id=&quot;tab-page-two&quot;&gt;
+    &lt;h2&gt;Markup&lt;/h2&gt;
+    &lt;p&gt;Tab Two Content Goes Here&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;tab-pane fade&quot; id=&quot;tab-page-three&quot;&gt;
+    &lt;h2&gt;Tab Page Three&lt;/h2&gt;
+    &lt;p&gt;Tab three content goes here&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;tab-pane fade&quot; id=&quot;tab-page-four&quot;&gt;
+    &lt;h2&gt;Tab Page Four&lt;/h2&gt;
+    &lt;p&gt;Tab four content goes here&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></p>
+					</div>
+					<div class="tab-pane fade" id="tab-page-three">
+						<h2>Tab Page Three</h2>
+						<p>Tab three content goes here</p>
+					</div>
+					<div class="tab-pane fade" id="tab-page-four">
+						<h2>Tab Page 4</h2>
+						<p>Tab four content goes here</p>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>	
+</div>

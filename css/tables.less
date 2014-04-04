@@ -1,0 +1,154 @@
+
+/* scrollable table */
+.table-wrap {
+	width: auto;
+	overflow-x: scroll;
+	text-overflow: ellipsis;
+	> table.table {
+		margin-bottom: 0;
+	}
+	-webkit-overflow-scrolling: touch;
+	&::-webkit-scrollbar {
+	    height: 8px;
+	    margin: 0 2px;
+	    background: @white;
+	}
+	&::-webkit-scrollbar-track {
+		background: @white;
+	}
+	&::-webkit-scrollbar-track-piece {
+		background: @white;
+	}
+	&::-webkit-scrollbar-thumb {
+		width: 10%;
+		background: @gray2;
+		border: 2px solid @white;
+		.border-radius(5px);
+	}
+}
+
+/*overwrite bootstrap*/
+.table-striped>tbody>tr:nth-child(odd)>td, 
+.table-striped>tbody>tr:nth-child(odd)>th {
+	background-color: @gray3;
+}
+
+table {
+	border-color: @gray2;
+	&.table {
+		width: 100%;
+		margin-bottom: 10px;
+		border-bottom: none;
+		-webkit-font-smoothing: subpixel-antialiased;
+		.checkbox {
+			margin-top: 0;
+			margin-bottom: 0;
+			input[type=checkbox] {
+				padding-left:0;
+				& + label {
+					margin-right: 2px;
+					padding:0;
+				}
+			}
+		}
+
+		/*overwrite bootstrap*/
+		>thead>tr>th {
+			vertical-align: bottom;
+			border-bottom: 2px solid #ccc;
+			padding-top: 0;
+		}
+		/*overwrite bootstrap*/
+		>thead>tr>th, 
+		>tbody>tr>th, 
+		>tfoot>tr>th, 
+		>thead>tr>td, 
+		>tbody>tr>td, 
+		>tfoot>tr>td {
+			line-height: 20px;
+			border-top: 1px solid #ccc;
+		}
+		
+		th {
+			vertical-align: top;
+			.user-select();
+			[class^="icon-"], [class*=" icon-"] {
+				font-size: 1.3333em;
+				position: relative;
+				top: 2px;
+				left: 5px;
+			}
+		}
+		tr {
+			td {
+				vertical-align: middle;
+				white-space: nowrap;
+				overflow-x: ellipsis;
+				form {
+					text-align: center;
+				}
+				&.checkbox-selection {
+					padding: 8px;
+				}
+			}
+		}
+	}
+	caption {
+		position: absolute;
+		left: -99999px;
+	}
+	&.table-edit {
+		a.icon-edit {
+			font-size: 1.5em;
+		}
+		tr {
+			[class^="icon-"], [class*=" icon-"] {
+				visibility: hidden;
+				color: @gray2;
+			}
+		}
+		tr:hover {
+			[class^="icon-"], [class*=" icon-"] {
+				visibility: visible;
+				.transition(150ms);
+				&:hover, &:active {
+					color: @gray1;
+				}
+			}
+		}
+	}
+}
+
+.table-actions {
+	margin-bottom: 20px;
+	display: block;
+	width: 100%;
+	float: left;
+	&:after {
+		clear:both;
+	}
+	.btn {
+		.transition(150ms);
+		&:hover {
+			border-color: @gray2 * 1.2;
+		}
+	}
+	.actions {
+		float: left;
+		button {
+			&[class^="icon-"], [class*=" icon-"] {
+				font-size: 1.1666em;
+			}
+			> [class^="icon-"], 
+			> [class*=" icon-"] {
+				font-size: 0.6666em;
+				position: relative;
+				top: -2px;
+			}
+		}
+	}
+	.sharing {
+		float: right;
+	}
+}
+

@@ -1,0 +1,187 @@
+<div class="row">
+	<div class="col-md-12 col-sm-12">
+		<div class="module">
+			<div class="heading">
+				<h1>Home Page Mock</h1>
+			</div>
+			<div class="module-content">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="wizard-steps">
+
+							<!-- previous steps - outlined in green -->
+							<a href="#" class="step previous">
+								<span class="prev-left"></span>
+									<p class="step-number">1a</p>
+									<p class="step-title">Step 1a: Enter Basic Information</p>
+								<span class="prev-right"></span>
+							</a>
+							
+							<!-- current step - green fill -->
+							<a href="#" class="step current">
+								<span class="current-left"></span>
+									<p class="step-number">2</p>
+									<p class="step-title">Step 2: Enter Complex Information</p>
+								<span class="current-right"></span>
+							</a>
+
+							<!-- next steps - outlined in gray -->
+							<a href="#" class="step next">
+								<span class="next-left"></span>
+									<p class="step-number">3</p>
+									<p class="step-title">Step 3: Enjoy The Fruits of Your Labor</p>
+								<span class="next-right"></span>
+							</a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-md-12">
+						<h2>Step 2: Enter Complex Information</h2>
+						<form action="#wizard">
+							<!-- title -->
+							<div class="row">
+								<div class="col-md-2 div col-xs-4">
+									<label for="title">Title: </label>
+								</div>
+								<div class="col-md-10 div col-xs-8">
+									<input type="text" name="title" tab-index="1" autofocus>
+								</div>
+							</div>
+							<hr>
+							<!-- description -->
+							<div class="row">
+								<div class="col-md-2 div col-xs-4">
+									<label for="description">Description: </label>
+								</div>
+								<div class="col-md-10 div col-xs-8">
+									<textarea name="description" id="description" tab-index="2"></textarea>
+								</div>
+							</div>
+							<hr>
+							<!-- instructions -->
+							<div class="row">
+								<div class="col-md-2 col-xs-4">
+									<label for="instructions">Instructions: </label>
+								</div>
+								<div class="col-md-10 col-xs-8">
+									<textarea name="instructions" id="instructions" tab-index="3"></textarea>
+								</div>
+							</div>
+							<hr>
+							<!-- open date range -->
+							<div class="row">
+								<div class="col-md-2 col-xs-4">
+									<label for="date-range">Open Date Range: </label>
+								</div>
+								<div class="col-md-10 col-xs-8">
+									<div class="date-time-wrapper">
+										<div class="date-select">
+											<label for="date-select">Start Date: </label>
+											<input type="text" class="datepicker" tab-index="4">
+											<span class="icon-calendar"></span>
+										</div>	<!-- date select -->
+
+										<div class="time-select">
+											<form action="#time-start">
+												<label for="time-select">Start Time: </label>
+												<div class="form-group custom-select">
+													<select name="hour" id="hour" class="form-control" tab-index="5">
+														<option value="b1">1</option>
+														<option value="b2">2</option>
+														<option value="b3">3</option>
+														<option value="b3">4</option>
+														<option value="b3">5</option>
+														<option value="b3">6</option>
+														<option value="b3">7</option>
+														<option value="b3">8</option>
+														<option value="b3">9</option>
+														<option value="b3">10</option>
+														<option value="b3">11</option>
+														<option value="b3">12</option>
+													</select>
+												</div>
+												<div class="time-select-colon">:</div>
+												<div class="form-group custom-select">
+													<select name="minute" id="minute" class="form-control" tab-index="6">
+														<option value="b1">00</option>
+														<option value="b2">15</option>
+														<option value="b3">30</option>
+														<option value="b3">45</option>
+													</select>
+												</div>
+												<div class="form-group custom-select">
+													<select name="ampm" id="ampm" class="form-control" tab-index="7">
+														<option value="b1">AM</option>
+														<option value="b2">PM</option>
+													</select>
+												</div>
+											</form>
+										</div> <!-- time select -->
+									</div>
+
+									<div class="date-time-wrapper">
+										<div class="date-select">
+											<label for="date-select">End Date: </label>
+											<input type="text" class="datepicker" tab-index="8">
+											<span class="icon-calendar"></span>
+										</div>	<!-- date select -->
+
+										<div class="time-select">
+											<form action="#time-start">
+												<label for="time-select">End Time: </label>
+												<div class="form-group custom-select">
+													<select name="hour" id="hour" class="form-control" tab-index="9">
+														<option value="b1">1</option>
+														<option value="b2">2</option>
+														<option value="b3">3</option>
+														<option value="b3">4</option>
+														<option value="b3">5</option>
+														<option value="b3">6</option>
+														<option value="b3">7</option>
+														<option value="b3">8</option>
+														<option value="b3">9</option>
+														<option value="b3">10</option>
+														<option value="b3">11</option>
+														<option value="b3">12</option>
+													</select>
+												</div>
+												<div class="time-select-colon">:</div>
+												<div class="form-group custom-select">
+													<select name="minute" id="minute" class="form-control" tab-index="10">
+														<option value="b1">00</option>
+														<option value="b2">15</option>
+														<option value="b3">30</option>
+														<option value="b3">45</option>
+													</select>
+												</div>
+												<div class="form-group custom-select">
+													<select name="ampm" id="ampm" class="form-control" tab-index="11">
+														<option value="b1">AM</option>
+														<option value="b2">PM</option>
+													</select>
+												</div>
+											</form>
+										</div> <!-- time select -->
+									</div>
+								</div>
+
+							</div>
+						</form>
+					</div>
+				</div>
+				<!-- pagination and submit/cancel section -->
+				<div class="row">
+					<div class="col-md-12 col-xs-12 module-footer">
+						<hr>
+						<div class="module-submit">
+							<a href="#submit" class="btn btn-submit">Submit</a>
+							<a href="#" rel="cancel" class="link-cancel">Cancel</a>	
+						</div>
+					</div>	
+				</div>	
+			</div>
+		</div>	
+	</div>	
+</div>

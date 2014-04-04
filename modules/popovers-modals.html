@@ -1,0 +1,121 @@
+<div class="row">
+	<div class="col-md-12 col-sm-12">
+		<div class="module">
+			<div class="heading">
+				<h1>Popovers and Modal Windows</h1>
+			</div>
+			<div class="module-content">
+				
+				<!-- =================================== -->
+				<!-- modal samples -->
+				<h2>Modal Window (Popup window) </h2>
+				<p><a href="#" data-toggle="modal" data-target="#example-modal">Modal in a link</a></p>
+
+				<p><a href="#" class="btn" data-toggle="modal" data-target="#example-modal">Modal in a button</a></p>
+				<p>Markup for a modal window trigger. Can be placed on nearly any element, not just anchor tags.</p>
+				<p><pre><code>&lt;a href=&quot;#&quot; class=&quot;btn&quot; data-toggle=&quot;modal&quot; data-target=&quot;#example-modal&quot;&gt;Modal&lt;/a&gt;</code></pre></p>
+				<p>This markup below is not visible when the page loads and should be placed after all visible content. If there are form elements present in the modal, place the <code>autofocus</code> attribute on the first one. This will receive user focus when the modal is opened.</p>
+				<p><pre><code>&lt;!-- modal --&gt;
+&lt;div class=&quot;modal fade&quot; id=&quot;example-modal&quot; tab-index=&quot;-1&quot; role=&quot;dialog&quot; aria-labelledby=&quot;example-modallabel&quot; aria-hidden=&quot;true&quot;&gt;
+  &lt;div class=&quot;modal-dialog&quot;&gt;
+    &lt;div class=&quot;modal-content&quot;&gt;
+      &lt;div class=&quot;modal-header&quot;&gt;
+        &lt;div class=&quot;close&quot; type=&quot;button&quot; data-dismiss=&quot;modal&quot; aria-hidden=&quot;true&quot;&gt;&lt;i class=&quot;icon-close&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;h4&gt;Modal Title&lt;/h4&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;modal-body&quot;&gt;
+        &lt;input type=&quot;text&quot; autofocus=&quot;autofocus&quot;&gt;
+        &lt;hr&gt;
+        &lt;input type=&quot;text&quot;&gt;
+        &lt;hr&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, ea, beatae, quia consequatur eius reiciendis assumenda in magnam recusandae aspernatur rerum tempore quaerat at incidunt saepe a explicabo ut natus.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;modal-footer&quot;&gt;
+        &lt;button class=&quot;btn btn-default&quot; data-dismiss=&quot;modal&quot;&gt;Close&lt;/button&gt;
+        &lt;button class=&quot;btn btn-submit&quot; type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;&lt;!-- /modal --&gt;
+</code></pre></p>
+			
+			<!-- =================================== -->
+			<!-- popover/tooltip samples -->
+			<h2>Popover / Tooltip</h2>
+			<button class="btn btn-default tip" data-trigger="hover" data-content="Hover for Tooltip that is informational only. This does not allow for user interaction.">Hover</button>
+			<a href="#" class="tip" data-trigger="hover" data-content="Hover for Tooltip that is informational only. This does not allow for user interaction.">Hover</a>
+			<p>
+				<pre><code>&lt;button class=&quot;btn btn-default tip&quot; 
+  data-trigger=&quot;hover&quot;
+  data-content=&quot;Hover for Tooltip that is informational only. This does not allow for user interaction.&quot;&gt;
+    Hover
+&lt;/button&gt;</code></pre>
+			</p>
+			<button data-popovercontent="#popover-form-1" class="btn btn-default tip" data-toggle="popover" data-trigger="click">Click</button>
+
+			<div id="popover-form-1" class="hidden">
+				<form action="" class="form-horizontal">
+					<div class="row">
+						<div class="col-sm-3">
+							<label for="name">Name: </label>
+						</div>
+						<div class="col-sm-9">
+							<input type="text">
+						</div>
+					</div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, earum voluptatum rerum saepe labore reprehenderit fugit quis animi dicta maxime. Dicta fuga voluptas fugiat tenetur dolorum eaque ipsum maiores ipsam.</p>
+					<button type="submit" class="btn btn-submit">Submit</button>
+					<button class="btn btn-default" data-dismiss="popover">Close</button>
+				</form>
+			</div>
+
+			<a class="tip" data-popovercontent="#popover-form-1" class="btn btn-default tip" data-toggle="popover" data-trigger="click">Click</a>
+			<p>For more complex popovers, include the <code>data-popovercontent</code> attribute with a value that corresponds to the id of a hidden div containing the HTML you wish to place in the popover. This is similar to the modal markup and functionality.<br>
+				<pre><code>&lt;button data-popovercontent=&quot;#popover-form-1&quot; class=&quot;btn btn-default tip&quot; data-toggle=&quot;popover&quot; data-trigger=&quot;click&quot;&gt;Click&lt;/button&gt;
+
+&lt;div id=&quot;popover-form-1&quot; class=&quot;hidden&quot;&gt;
+  &lt;form action=&quot;&quot; class=&quot;form-horizontal&quot;&gt;
+  &lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-sm-3&quot;&gt;
+  &lt;label for=&quot;name&quot;&gt;Name: &lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-sm-9&quot;&gt;
+  &lt;input type=&quot;text&quot;&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, earum voluptatum rerum saepe labore reprehenderit fugit quis animi dicta maxime. Dicta fuga voluptas fugiat tenetur dolorum eaque ipsum maiores ipsam.&lt;/p&gt;
+  &lt;button type=&quot;submit&quot; class=&quot;btn btn-submit&quot;&gt;Submit&lt;/button&gt;
+  &lt;/form&gt;
+  &lt;/div&gt;</code></pre></p>		
+			</div>
+
+
+			<!-- =================================== -->
+			<!-- modal    // #Example-modal //       -->
+			<div class="modal fade" id="example-modal" tab-index="-1" role="dialog" aria-labelledby="example-modallabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<div class="close" type="button" data-dismiss="modal" aria-hidden="true"><span class="icon-close"></span></div>
+							<h4>Modal Title</h4>
+						</div>
+						<div class="modal-body">
+							<input type="text" autofocus="autofocus">
+							<hr>
+							<input type="text">
+							<hr>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, ea, beatae, quia consequatur eius reiciendis assumenda in magnam recusandae aspernatur rerum tempore quaerat at incidunt saepe a explicabo ut natus.</p>
+						</div>
+						<div class="modal-footer">
+							<button class="btn btn-default" data-dismiss="modal">Close</button>
+							<button class="btn btn-submit" type="submit">Submit</button>
+						</div>
+					</div>
+				</div>
+			</div><!-- /modal -->
+
+
+
+		</div>	
+	</div>	
+</div>

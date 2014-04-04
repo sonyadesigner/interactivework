@@ -1,0 +1,25 @@
+.token-field {
+	width: 100%;
+	float: left;
+	padding: 3px;
+	border: 1px solid @gray2;
+	&:active, &:focus {
+		border: 1px solid @gray1;
+	}
+
+	> span.token {
+		float: left;
+		padding: 3px 3px 3px;
+		border: 1px solid @gray2;
+		color: @gray2;
+		font-size: 0.8333em;
+		line-height: 0;
+		vertical-align: middle;
+		margin-right: 5px;
+		[class*="icon-"], [class^=" icon-"] {
+			padding-left: 3px;
+			font-size: 0.8333em;
+			cursor: pointer;
+		}
+	}
+}

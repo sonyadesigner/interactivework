@@ -1,0 +1,260 @@
+<ul class="breadcrumb">
+	<li><a href="#">Click Path 1</a></li>
+	<li><a href="#">Click Path 2</a></li>
+	<li class="active">Current Page</li>
+</ul>
+		
+<div class="row">
+	<div class="col-md-12">
+		<div class="module">
+			<div class="heading">
+				<h1>Table Actions</h1>
+			</div>
+			<div class="module-content">
+
+				<div class="row">
+					<div class="table-actions">
+						<button class="btn btn-create pull-left icon-plus"> Create New Report</button>
+						<div class="select-filter pull-right">
+							
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="table-actions">
+						<div class="actions">
+							<button class="icon-remove btn btn-default" title="Remove"></button>
+							<button class="icon-edit btn btn-default" title="Edit"></button>
+							<button class="icon-copy btn btn-default" title="Copy"></button>
+							<button data-popovercontent="#move-to-folder" class="icon-folder-open btn btn-default tip" data-toggle="popover" data-trigger="click" data-placement="bottom">
+								<span class="icon-arrow-down"></span>
+							</button>
+						</div>
+						<div class="sharing">
+							<button class="btn btn-default" data-toggle="modal" data-target="#modal-share">Share</button>
+							<button class="btn btn-default flush" data-toggle="modal" data-target="#modal-export">Export</button>
+						</div>
+					</div>
+				</div>		
+						
+				<div class="row">
+					<div class="table-wrap">
+						<table class="table table-striped table-hover">
+						<caption>This is a brief description of the data in this table.</caption>
+						<thead>
+							<tr>
+								<th scope="col">&nbsp;</th>
+								<th scope="col">Name</th>
+								<th scope="col">Type</th>
+								<th scope="col">Location</th>
+								<th scope="col">Sharing Setting</th>
+								<th scope="col">Last Changed</th>
+							</tr>
+						</thead>
+						<tr>
+							<td>
+								<form action="" class="form-stacked">
+									<div class="form-group">
+										<div class="checkbox">
+											<input type="checkbox" id="checkbox-td1" name="options" value="checkbox-td1">
+											<label for="checkbox-td1">&nbsp;</label>
+										</div>
+									</div>	
+								</form>	
+							</td>
+							<td>Field Experience Course 201</td>
+							<td>Custom Report</td>
+							<td>Course Evaluation</td>
+							<td>Private</td>
+							<td>04/15/2013</td>
+						</tr>
+						<tr>
+							<td>
+								<form action="" class="form-stacked">
+									<div class="form-group">
+										<div class="checkbox">
+											<input type="checkbox" id="checkbox-td2" name="options" value="checkbox-td2">
+											<label for="checkbox-td2">&nbsp;</label>
+										</div>
+									</div>	
+								</form>	
+							</td>
+							<td>Field Experience Course 201</td>
+							<td>Custom Report</td>
+							<td>Course Evaluation</td>
+							<td>Private</td>
+							<td>04/15/2013</td>
+						</tr>
+						<tr>
+							<td>
+								<form action="" class="form-stacked">
+									<div class="form-group">
+										<div class="checkbox">
+											<input type="checkbox" id="checkbox-td3" name="options" value="checkbox-td3">
+											<label for="checkbox-td3">&nbsp;</label>
+										</div>
+									</div>	
+								</form>	
+							</td>
+							<td>Field Experience Course 201</td>
+							<td>Custom Report</td>
+							<td>Course Evaluation</td>
+							<td>Private</td>
+							<td>04/15/2013</td>
+						</tr>
+						<tr>
+							<td>
+								<form action="" class="form-stacked">
+									<div class="form-group">
+										<div class="checkbox">
+											<input type="checkbox" id="checkbox-td4" name="options" value="checkbox-td4">
+											<label for="checkbox-td4">&nbsp;</label>
+										</div>
+									</div>	
+								</form>	
+							</td>
+							<td>Field Experience Course 201</td>
+							<td>Custom Report</td>
+							<td>Course Evaluation</td>
+							<td>Private</td>
+							<td>04/15/2013</td>
+						</tr>
+					</table>
+					</div> <!-- table-wrap -->
+				</div>
+
+
+			</div>
+		</div>	
+	</div>	
+</div>
+
+
+
+<!-- popover content -->
+<div id="move-to-folder" class="hidden"> 
+	<form action="" class="form-horizontal">
+		<p>Move To: </p>
+		<hr>
+		<ul>
+			<li><a href="#">Folder 1</a></li>
+			<li><a href="#">Folder 2</a></li>
+			<li><a href="#">Folder 3 - This one has a long title</a></li>
+			<li><a href="#">Folder 4</a></li>
+			<li><a href="#">Folder 5</a></li>
+			<li><a href="#">Folder 6</a></li>
+		</ul>
+		<hr>
+		<button type="button" class="btn btn-default">Create New Folder</button>
+	</form>
+</div>
+
+<!-- modal-sharing -->
+<div class="modal fade" id="modal-share" tab-index="-1" role="dialog" aria-labelledby="modal-share" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="close" type="button" data-dismiss="modal" aria-hidden="true"><span class="icon-close"></span></div>
+				<h4>Share This Report</h4>
+			</div>
+			<div class="modal-body">
+
+				<div class="message-field">
+					<p>To:</p>
+					<span class="token">First Name Last Name <span class="icon-close"></span></span>
+					<span class="token">Email@Email.com <span class="icon-close"></span></span>
+					<span class="token">So-and-So <span class="icon-close"></span></span>
+				</div>
+
+				<div class="message-field">
+					<p>Subject:</p>
+					<p>Geri Amos has shared a report with you</p>
+				</div>
+				
+				<textarea name="" id="">This is a message from Geri Amos descsribing the report they just shared with you. This is a message from Geri Amos descsribing the report they just shared with you. </textarea>
+
+				<div class="form-group">
+					<div class="checkbox">
+						<input type="checkbox" id="checkbox10" name="options" value="checkbox10">
+						<label for="checkbox10">Send a copy of this message to my email address</label><br>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6"><p><b>Attachment Type:</b></p>
+						<div class="form-group">
+							<div class="radio">
+								<input type="radio" id="radio1" name="options" value="radio1">
+								<label for="radio1">CVS</label><br>
+								<input type="radio" id="radio2" name="options" value="radio2">
+								<label for="radio2">HTML</label><br>
+								<input type="radio" id="radio3" name="options" value="radio3">
+								<label for="radio3">PDF</label><br>
+								<input type="radio" id="radio4" name="options" value="radio4">
+								<label for="radio4">RTF</label><br>
+								<input type="radio" id="radio5" name="options" value="radio5">
+								<label for="radio5">XLSX</label><br>
+							</div>
+						</div></div>
+					<div class="col-md-6"><p><b>Select Content to Share:</b></p>
+						<div class="form-group">
+							<div class="checkbox">
+								<input type="checkbox" id="checkbox11" name="options" value="checkbox11">
+								<label for="checkbox11">Presentation Display</label><br>
+								<input type="checkbox" id="checkbox12" name="options" value="checkbox12">
+								<label for="checkbox12">Data Display</label><br>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<hr>
+			<button class="btn btn-default" data-dismiss="modal">Close</button>
+			<button class="btn btn-submit" type="submit">Submit</button>
+			</div>
+			</div>
+	</div>
+</div><!-- /modal -->
+
+<div class="modal fade" id="modal-export" tab-index="-1" role="dialog" aria-labelledby="modal-export" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="close" type="button" data-dismiss="modal" aria-hidden="true"><span class="icon-close"></span></div>
+        <h4>Export Report</h4>
+      </div>
+      <div class="modal-body">
+        <p><span class="badge">1</span> Select content to export:</p>
+        <div class="form-group">
+        	<div class="checkbox indented">
+        		<input type="checkbox" id="checkbox1" name="options" value="checkbox1">
+        		<label for="checkbox1">Presentation Display</label>
+        		<br>
+        		<input type="checkbox" id="checkbox2" name="options" value="checkbox2">
+        		<label for="checkbox2">Data Display</label>
+        		<br>
+        	</div>
+        </div>
+        <p><span class="badge">2</span> Select file type:</p>
+        <div class="form-group">
+        	<div class="radio indented">
+        		<input type="radio" id="radio11" name="options2" value="radio11">
+        		<label for="radio11">HTML</label><br>
+        		<input type="radio" id="radio21" name="options2" value="radio21">
+        		<label for="radio21">PDF</label><br>
+        		<input type="radio" id="radio31" name="options2" value="radio31">
+        		<label for="radio31">RTF</label><br>
+        		<input type="radio" id="radio41" name="options2" value="radio41">
+        		<label for="radio41">XLSX</label><br>
+        	</div>
+        </div>
+      </div>
+      <div class="modal-footer">
+      	<hr>
+        <button class="btn btn-default" data-dismiss="modal">Close</button>
+        <button class="btn btn-submit" type="submit">Submit</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->

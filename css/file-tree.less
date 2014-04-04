@@ -1,0 +1,103 @@
+div.file-tree {
+
+	.file-tree-all {
+		p {
+			a:link, a:active, a:hover, a:visited {
+				margin-right: 20px;
+			}
+		}
+	}
+	padding-left: 30px;
+	.panel-group {
+		height: auto;
+		margin-bottom: 0;
+		.panel {
+			overflow: visible;
+			&+.panel {
+				margin-top: 0;
+			}
+		}
+		.panel-default {
+			border: 0 none;
+			.drop-shadow(0,0,0,0,0);
+
+			/*first tier*/
+			i[data-toggle="collapse"] {
+				float: left;
+				margin: 5px 10px 0 -30px;
+				color: @gray2;
+				font-size: 0.8333em;
+				position: relative;
+				top: 4px;
+				cursor: pointer;
+				.rotate(90deg);
+				&.collapsed {
+					.rotate(0deg);
+				}
+			}
+			> .panel-heading {
+				background-color: transparent;
+				border: 0 none;
+				border-color: transparent;
+				padding: 0;
+				color: @gray1;
+				font-weight: bold;
+				label {
+					color: @gray1;
+					font-weight: bold;
+					&:before {
+						bottom: 3px;
+					}
+				}
+				.form-group {
+					margin-bottom: 0;
+					.checkbox {
+						margin-top: 0;
+						margin-bottom: 0;
+					}
+				}
+			}
+			.panel-title {
+				font-size: 1em;
+				line-height: 26px;
+			}
+			/*second tier*/
+			> .panel-group {
+				margin-left: 30px;
+				.panel-default {
+					> .panel-heading {
+						label {
+							font-weight: normal;
+						}
+					}
+					/*third tier*/
+					> .panel-group {
+						margin-left: 30px;
+						.panel-default {
+							> .panel-heading {
+								label {
+									font-weight: normal;
+									font-style: italic;
+								}
+							}
+							/*fourth tier - doesn't exist, but just in case. */
+							> .panel-group {
+								margin-left: 30px;
+								.panel-default {
+									> .panel-heading {
+										label {
+											font-weight: normal;
+											font-style: italic;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+

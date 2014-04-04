@@ -1,0 +1,253 @@
+<div class="row">
+	<div class="col-md-12">
+		<div class="module">
+			<div class="heading">
+				<h1>New Message</h1>
+			</div>
+			<div class="module-content">
+				<div class="row">
+					<form action="#compose-new-message" class="form-horizontal">
+					<!-- message recipient -->
+					<div class="col-md-12">
+						<div class="row">
+							
+								<div class="col-md-3">
+									<label for="message-recipient">To: </label>
+								</div>
+								<div class="col-md-9">
+									<input type="email" autofocus tabindex="1">
+								</div>
+						</div>
+						<hr>
+						<!-- user groups -->
+						<div class="row">
+							
+								<div class="col-md-3">
+									<label for="message-recipient">User Groups: </label>
+								</div>
+								<div class="col-md-9">
+									<div class="form-group custom-select">
+										<select name="user-groups" id="user-groups" class="form-control"  tabindex="2">
+											<option value="a1">None</option>
+											<option value="a2">AH All Faculty</option>
+											<option value="a2">AH All Students</option>
+											<option value="a2">Administration</option>
+											<option value="a3">Create a User Group - A really long selection option for testing purposes and fun. </option>
+										</select>
+									</div>
+								</div>
+
+						</div>
+						<hr>
+					
+						<!-- courses -->
+						<div class="row">
+							<div class="col-md-12">
+								<label for="courses">Courses: </label>
+							</div>
+							<div class="col-md-12">
+								<table class="table table-striped table-sortable">
+									<thead>
+										<tr>
+											<th></th>
+											<th data-sort="string"class="sorted">Course No.</th>
+											<th data-sort="int" class="sorted">Section</th>
+											<th data-sort="string" class="sorted">Instructor</th>
+											<th data-sort="string"class="sorted">Semester</th>
+										</tr>
+									</thead>
+									<tr>
+										<td class="checkbox-selection">
+											<form action="" class="form-stacked">
+												<div class="form-group">
+													<div class="checkbox">
+														<input type="checkbox" id="checkbox-td1" name="options" value="checkbox-td1">
+														<label for="checkbox-td1" tabindex="3">&nbsp;</label>
+													</div>
+												</div>	
+											</form>	
+										</td>
+										<td>ART301</td>
+										<td>503</td>
+										<td>Malik, Sonia</td>
+										<td>Fall 2014</td>
+									</tr>
+									<tr>
+										<td class="checkbox-selection">
+												<div class="form-group">
+													<div class="checkbox">
+														<input type="checkbox" id="checkbox-td2" name="options" value="checkbox-td2">
+														<label for="checkbox-td2" tabindex="4">&nbsp;</label>
+													</div>
+												</div>	
+										</td>
+										<td>ENDS101</td>
+										<td>501</td>
+										<td>Jefferson, Thomas</td>
+										<td>Summer 2014</td>
+									</tr>
+									<tr>
+										<td class="checkbox-selection">
+
+												<div class="form-group">
+													<div class="checkbox">
+														<input type="checkbox" id="checkbox-td3" name="options" value="checkbox-td3">
+														<label for="checkbox-td3" tabindex="5">&nbsp;</label>
+													</div>
+												</div>	
+
+										</td>
+										<td>BUS215</td>
+										<td>510</td>
+										<td>Packer, Chris</td>
+										<td>Spring 2014</td>
+									</tr>
+									<tr>
+										<td class="checkbox-selection">
+
+												<div class="form-group">
+													<div class="checkbox">
+														<input type="checkbox" id="checkbox-td4" name="options" value="checkbox-td4">
+														<label for="checkbox-td4" tabindex="6">&nbsp;</label>
+													</div>
+												</div>	
+
+										</td>
+										<td>PHYS421</td>
+										<td>505</td>
+										<td>Malik, Sonya</td>
+										<td>Fall 2014</td>
+									</tr>
+									<tr>
+										<td class="checkbox-selection">
+
+												<div class="form-group">
+													<div class="checkbox">
+														<input type="checkbox" id="checkbox-td5" name="options" value="checkbox-td5">
+														<label for="checkbox-td5" tabindex="7">&nbsp;</label>
+													</div>
+												</div>	
+
+										</td>
+										<td>SOC332</td>
+										<td>502</td>
+										<td>Kardashian, Kimberly</td>
+										<td>Spring 2014</td>
+									</tr>
+								</table>
+								<p><a href="#select-more-courses">Select More Courses</a></p>
+							</div>
+						</div>
+						<hr>
+					</div>	
+
+					<div class="col-md-12">
+						<!-- Subject -->
+						<div class="row">
+
+								<div class="col-md-3">
+									<label for="subject">Subject: *</label>
+								</div>
+								<div class="col-md-9">
+									<input type="text"  tabindex="8">
+								</div>
+
+						</div>
+						<hr>
+
+						<!-- priority -->
+						<div class="row">
+							<form action="#priority" class="form-horizontal">
+								<div class="col-md-3">
+									<label for="priority">Priority: </label>
+								</div>
+								<div class="col-md-9">
+									<div class="form-group custom-select">
+										<select name="priority" id="priority" class="form-control"  tabindex="9">
+											<option value="a1">Please Select</option>
+											<option value="a2">High</option>
+											<option value="a2">Low</option>
+											<option value="a2">Normal</option>
+										</select>
+									</div>
+								</div>
+							</form>
+						</div>
+						<hr>
+
+						<!-- message -->
+						<div class="row">
+
+								<div class="col-md-3">
+									<label for="message">Message: </label>
+								</div>
+								<div class="col-md-9">
+									<div class="form-group">
+										<div class="richtext"><a href="#trigger-richtext-plugin" class="icon-richtext"></a></div>
+										<textarea name="message" id="message" tabindex="10"></textarea>
+										
+									</div>
+								</div>
+
+						</div>
+						<hr>
+
+						<!-- attach a document -->
+						<div class="row">
+
+								<div class="col-md-3">
+									<label for="file">Attach Files:</label>
+								</div>
+								<div class="col-md-9">
+									<div class="add-file">
+										<label for="file">
+											<input type="file" class="form-control">
+										</label>
+									</div>
+									<p><span class="icon-close-circle"></span> File attachment 1</p>	
+									<p><span class="icon-close-circle"></span> File attachment 1</p>	
+									<p><span class="icon-close-circle"></span> File attachment 1</p>	
+
+								</div>
+
+						</div>
+						<hr>
+
+						<!-- send emails to recipients -->
+						<div class="row">
+
+								<div class="col-md-3">
+									<label for="send-email">Send email to recipients: </label>
+								</div>
+								<div class="col-md-9">
+									<form action="" class="form-stacked">
+										<div class="form-group">
+											<div class="checkbox">
+												<input type="checkbox" id="checkbox-td6" name="options" value="checkbox-td4">
+												<label for="checkbox-td6" tabindex="11">Yes</label>
+											</div>
+										</div>	
+									</form>	
+								</div>
+
+						</div>
+
+					</div>
+
+				</div>	
+
+				<!-- pagination and submit/cancel section -->
+				<div class="row">
+					<div class="col-md-12 module-footer">
+						<hr>
+						<div class="module-submit">
+							<a href="#send-message" class="btn btn-submit">Send</a>
+							<a href="#" rel="cancel" class="link-cancel">Cancel</a>	
+						</div>
+					</div>	
+				</div>
+				</form>
+			</div>
+		</div>	
+	</div>	
+</div>

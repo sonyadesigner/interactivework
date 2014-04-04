@@ -1,0 +1,348 @@
+@import 'lessmixins.less';
+
+/* Static Top Bar */
+.row#utility-bar {
+	background-color: @white;
+	position: relative;
+	z-index: 10;
+	min-width: 620px;
+	width: 100%;
+	height: 49px;
+	.box-shadow(0px 3px 3px 0px rgba(0,0,0, 0.10));
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	.branding {
+		float: left;
+		margin: 10px 0 0 10px;
+		width: 270px;
+		a:link, a:visited, a:hover, a:active {
+			text-decoration:none;
+			border: 0 none;
+			background: transparent;
+		}
+		.logo {
+			float: left;
+			margin-right: 10px;
+			&.tk20 {
+				background-image: url('../img/tk20logo.png');
+				background-repeat: no-repeat;
+				width: 118px;
+				height: 33px;
+			}
+			&.client {
+				float: left;
+				background-image: url('../img/clientlogo.png');
+				width: 130px;
+				height: 33px;
+			}
+		}
+	}
+	
+	div.user-status {
+		float: right;
+		margin-right: 20px;
+		div.divider {
+			content: " ";
+			float: left;
+			height: 30px;
+			width: 1px;
+			background: @gray3;
+			.box-sizing();
+			margin: 10px 10px 9px 10px;
+		}
+		div.user-messages,
+		div.user-tasks,
+		div.user-preferences {
+			position: relative;
+			cursor: pointer;
+			float: left;
+			height: 100%;
+			.icon-user {
+				padding: 0 20px;
+			}
+			p {
+				float: left;
+				color: @gray2;
+				font-weight: 600;
+				margin: 18px 0 0 5px;
+				max-width: 160px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+
+			}
+			[class^="icon-"], [class*=" icon-"] {
+				float: left;
+				padding: 15px 10px;
+				font-size: 1.5em;
+				color: @gray2;
+				&:hover, &:focus {
+					color: @gray1;
+				}
+				&.new-activity {
+					color: @secondary;
+				}
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+			&:hover,
+			&:active, 
+			&:focus,
+			&:hover p,
+			&:active p, &:focus p,
+			&:hover [class^="icon-"], 
+			&:hover [class*=" icon-"],
+			&:active [class^="icon-"], 
+			&:active [class*=" icon-"],
+			&:focus [class^="icon-"], 
+			&:focus [class*=" icon-"]  {
+				.transition(150ms);
+				color: @gray1;
+			}
+			span.icon-arrow-down:before {
+				font-size: 1.3333em;
+				position: relative;
+				top: -2px;
+			}
+		}
+		.user-preferences p {
+			text-transform: uppercase;
+		}
+		.user-status-caret {
+			position: absolute;
+			z-index: 10;
+			top: 100%;
+			left: 50%;
+			.opacity(0);
+			margin-left: -14px;
+			width: 25px; 
+			height: 25px; 
+			background: url('../assets/ui/utility-caret.png') no-repeat;
+			
+		}
+		.drawer-trigger.active {
+			position: relative;
+			.user-status-caret {
+				.opacity(1);
+				.transition(300ms);
+			}
+		}
+	}
+}
+
+/* The Drawer on user preferences click */
+div.utility-drawer {
+	position: absolute;
+	z-index: 8;
+	top: -100px;
+	right: 15px;
+	width: 410px;
+	background: @white;
+	padding: 85px 0 0;
+	.border-radiuses(0, 5px, 5px, 0);
+	.drop-shadow();
+	.box-sizing(border-box);
+	section {
+		display: none;
+		h6 {
+			margin-left: 2.439%; /* 10px */
+		}
+	}
+	section#preferences {
+
+		.item:hover, 
+		.item:active {
+			background: @white;
+		}
+		.item-container {
+			border-top: 0 none;
+			margin-top: -5px;
+		}
+	}
+	section#tasks {
+		.sender-details {
+			width: 100%;
+		}
+	}
+	.item {
+		cursor: pointer;
+		float: left;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		.item-container {
+			float: left;
+			padding: 10px 0;
+			margin: 0 2.439%;    /* 0 10px */
+			border-top: 1px solid @gray3;
+			width: 95.122%; /* 390px */
+		}
+		
+		&:hover, &:focus {
+			background: @gray3;
+		}
+		&:first-child {
+			border-top: none;
+		}
+		h6 {
+			margin: 0;
+		}
+		.sender-picture {
+			float: left;
+			width: 8.048%;  /* 33px */
+			height: 8.048%;  /* 33px */
+			margin-right: 2.439%; /*10px*/
+			.icon-user:before {
+				color: @gray3;
+				font-size: 2.75em;
+			}
+		}
+		.sender-details {
+			float: left;
+			width: 89.365%; /*350px*/
+
+			.message-top,
+			.message-preview {
+				float: left;
+				width: 100%;
+			}
+			.sender-name,
+			.date-sent,
+			.message-preview {
+				p, em { 
+					color: @gray2;
+					font-size: 0.9167em; 
+					line-height: 16px;
+					margin: 0;
+				}
+			}
+			.message-preview {
+				p, em {
+					width: 300px;
+					height: 16px;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+				}
+			}
+			.sender-name {
+				float: left;
+				width: 71.181%;  /* 247px */
+				margin-right: 2.439%; /*10px*/
+				p {
+					font-size: 1em;
+				}
+			}
+			.date-sent {
+				width: 24.390%;   /* 100px */ 
+				float: right;
+				text-align: right;
+				font-style: italic;
+				p {
+					font-size: 1em;
+				}
+			}
+		}
+		.user-picture {
+			float: left;
+			margin: 0 2.439% 0 0;
+			width: 13.414%; /* 55px */
+			height: 13.414%; /* 55px */
+			.icon-user, img {
+				font-size: 3.3333em;
+				color: @gray2;
+				width: 100%;
+				height: auto;
+			}
+		}
+		.user-info {
+			float: left;
+			width: 83%; /* 325px */
+			.user-name {
+				width: 100%;
+				margin-bottom: 5px;
+				p {
+					margin: 0;
+					font-size: 1em;
+					a {
+						text-decoration: none;
+					}
+				}
+			}
+			.user-role-select {
+				width: 100%;
+				.form-group select.form-control {
+					width: 100%;
+					padding: 0 5px;
+					height: 22px;
+				}
+				span.icon-arrow-down {
+					margin-top: -5px;
+					top: 50%;
+					right: 10px;
+					font-size: 1.1666em;
+				}
+			}
+		}
+		&.unread {
+			.sender-picture {
+				.icon-user:before {
+					color: @gray1;
+				}
+			}
+			.sender-details {
+				.sender-name,
+				.date-sent,
+				.message-preview {
+					p, em { 
+						color: @gray1;
+						font-weight: 700;
+					}
+				}
+			}
+		}
+		
+	}
+}
+div.view-all {
+	clear:both; 
+	background: @gray2;
+	.border-radiuses(0, 5px, 5px, 0);
+	&:hover, &:focus {
+		.transition(150ms);
+		background: @gray2;
+	}
+	p {
+		text-align: center;
+		padding: 0 0 6px;
+		margin: 0;
+		font-size: 0.9167em;
+		letter-spacing: 0.05em;
+		line-height: 1;
+		text-transform: uppercase;
+		font-weight: 300;
+		a:link, a:visited,
+		a:hover, a:active, &:focus {
+			color: @white;
+			text-decoration: none;
+		}
+		span {
+			position: relative;
+			top: 1px;
+			font-size: 1.5em;
+			color: @white;
+		}
+	}
+}
+
+/*remove the username at 800px screen width*/
+@media screen and (max-width: 800px) {
+	.row#utility-bar div.user-status div.user-preferences p {
+		display: none;
+	}
+}

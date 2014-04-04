@@ -1,0 +1,247 @@
+form,
+.form-horizontal {
+	.form-group {
+		margin: 0 0 0;
+		
+		.form-control {
+			height: auto;
+			padding: 3px 10px;
+		}
+	}
+	.control-label {
+		padding-top: 4px;
+	}
+	/*button.btn {
+		margin: 2px 0 0 10px;
+	}*/
+	.checkbox {
+		padding-top: 0;
+	}
+}
+
+/*labels*/
+label {
+	padding-top:4px;
+	margin-bottom: 0;
+}
+
+@media screen and (max-width:960px){
+	label {
+		margin-bottom: 10px;
+	}
+	div.checkbox,
+	div.radio {
+		label {
+			margin-bottom: 0;
+		}
+	}
+}
+/* inputs */
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="date"] {
+	width: 100%;
+	padding: 3px 10px;
+	border: 1px solid @gray2;
+	&:active,
+	&:focus {
+		border: 1px solid @gray1;
+		outline: none;
+	}
+	&:after {
+		border-bottom: 1px solid @gray2;
+	}
+}
+input[type="file"] {
+	-webkit-appearance: none;
+	padding: 5px 0;
+	border: 0 none;
+	&:focus {
+		outline: 1px dotted @primary;
+	}
+}
+
+
+/* radio and checkboxes */
+div.form-group > div.radio,
+div.form-group > div.checkbox {
+	&.indented {
+		margin-left: 30px;
+	}
+	label {
+		display: inline-block;
+		cursor: pointer;
+		position: relative;
+		padding-left: 25px;
+		margin-right: 15px;
+		font-size: 1em;
+	}
+	input[type='radio'],
+	input[type='checkbox'] {
+		position: absolute;
+		left: -999999px;
+		&:focus + label:before {
+			outline: 1px dotted @primary;
+		}
+	}
+	label:before {
+		content:"";
+		display: inline-block;
+		width: 13px;
+		height: 13px;
+		margin-right: 10px;
+		position: absolute;
+		left: 0;
+		bottom: 2px;
+		background-color: @gray3;
+		-webkit-box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+		-moz-box-shadow: 	inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+		box-shadow: 		inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+	}
+}
+div.form-group > div.radio {
+	padding-left: 0;
+	label:before {
+		.border-radius(100%);
+	}
+	input[type='radio']:checked + label:before {  
+	    content: "\2022";  
+	    color: @white;  
+	    font-size: 1.6667em;  
+	    text-align: center;  
+	    line-height: 13px;  
+	    background: @green;
+
+	} 
+}
+div.form-group > div.checkbox {
+	padding-left: 0;
+	label:before {
+		.border-radius(3px);
+	}
+	input[type='checkbox']:checked + label:before {
+		content: "\2713";
+		font-size: 0.8333em;
+		color: @white;
+		text-align: center;
+		line-height: 13px;
+		background: @green;
+	}
+}
+
+/*inline inputs with attached buttons*/
+input.input-inline {
+	height: 28px;
+}
+
+button.btn-inline {
+	position: relative;
+	left: -10px;
+	color: @white;
+	background: @gray2;
+	border: none;
+	padding: 4px 10px;
+	.inner-shadow(0px, 1px, 2px, 2px, 0.15);
+	.text-shadow(0 1px 3px rgba(0, 0, 0, 0.25));
+}
+
+/*textarea*/
+textarea {
+	width: 100%;
+	max-width: 100%;
+	min-width: 100%;
+	min-height: 80px;
+	padding: 10px;
+	border: 1px solid @gray2;
+	&:focus {
+		outline: none;
+		border: 1px solid @gray1;
+	}
+}
+div.richtext {
+	border: 1px solid @gray2;
+	border-bottom: 0 none;
+	padding: 3px 5px 0;
+	text-align: right;
+	> a, 
+	> [class^="icon-"], 
+	> [class*=" icon-"] {
+		color: @gray1;
+		font-size: 1em;
+		margin: 0;
+		padding: 0;
+	}
+}
+div.richtext + textarea {
+	border-top: 1px solid @gray3;
+	&:focus {
+		border-top: 1px solid @gray1;
+	}
+}
+
+
+/* success / warning / error on form controls */
+.form-control {
+	.drop-shadow(0,0,0,0,0);
+	height: auto;
+	padding: 3px 10px;
+	&:focus {
+		.drop-shadow(0,0,0,0,0);
+	}
+}
+select.form-control {
+	border: 1px solid @gray2;
+	&:focus {
+		border: 1px solid @gray1;
+	}
+}
+.has-error,
+.has-success,
+.has-warning {
+	.drop-shadow(0,0,0,0,0);
+	.form-control {
+		.drop-shadow(0,0,0,0,0);
+		&:focus {
+			.drop-shadow(0,0,0,0,0);
+		}
+	}
+}
+.has-success {
+	.control-label {
+		color: @green;
+	}
+	.form-control {
+		border-color: @green;
+	}
+}
+
+/* input type file */
+.add-file {
+	width: 100px;
+	height: 28px;
+	-webkit-background-size: 100px 57px;
+	background-size: 100px 57px;
+	background-image: url(../assets/ui/add-file.png);
+	background-repeat: no-repeat;
+	background-position: 0 -30px;
+	overflow: hidden;
+	margin-bottom: 10px;
+	&:active {
+		.inner-shadow(0, 1px, 2px, 1px, 0.15);
+	}
+	input[type="file"] {
+		width: 100%;
+		height: 100%;
+		.opacity(0);
+	}
+}
+input ~ p [class^="icon-"],
+input ~ p [class*=" icon-"] {
+	font-size: 1.16667em;
+	color: @gray2;
+	position: relative;
+	top: 3px;
+	padding-right: 10px;
+	cursor: pointer;
+}

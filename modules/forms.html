@@ -1,0 +1,355 @@
+<div class="row">
+	<div class="col-md-12">
+		<div class="module">
+			<div class="heading">
+				<h1>Form Layout</h1>
+			</div>
+			<div class="module-content">
+				<h2>Description</h2>
+					<p>Forms will follow a 25% / 75% column layout. Labels or brief descriptions on the left, and input fields on the right. At smaller screen sizes, these will collapse to a single, stacked column. <code>form</code> tags will be nested immediately inside the opening and closing <code>div class="module-content"</code> elements.</p>
+					<p>Each row of paired labels and inputs (wrapped in a <code>&lt;div class=&quot;form-group&quot;&gt; ... &lt;/div&gt;</code> will be followed with an <code>&lt;hr&gt;</code> tag, which will provide the consistent spacing and separation between each field.</p>
+				<hr>
+				<h2>Example</h2>
+						
+					<form action="" class="form-horizontal">
+						<div class="form-group">
+							<div class="col-md-3">
+								<label for="text" class="control-label">Example Label:</label>
+							</div>
+							<div class="col-md-9">
+								<input type="text" name="text" class="form-control" placeholder="Example Text Input" tab-index="101">
+							</div>
+						</div>
+					</form>
+
+				<hr>
+				<h2>Accessibility</h2>
+					<p>Proper and consistent use of <code>name</code> and <code>for</code> attributes is key. </p>
+				<hr>
+				<h2>Markup:HTML</h2>
+					<pre><code class="hljs html">&lt;div class=&quot;module-content&quot;&gt;
+	&lt;form action=&quot;&quot; class=&quot;form-horizontal&quot;&gt;
+		&lt;div class=&quot;form-group&quot;&gt;
+			&lt;div class=&quot;col-md-3&quot;&gt;
+				&lt;!-- Insert Label Here --&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;col-md-9&quot;&gt;
+				&lt;!-- Insert Input Here --&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;hr&gt;
+
+		&lt;!-- Repeat Form Groups as Needed --&gt;
+	&lt;/form&gt;
+&lt;/div&gt;</code></pre>
+				<h2>Markup:CSS (.LESS)</h2>
+					<pre><code class="hljs css">...</code></pre>
+				<h2>Markup:JavaScript</h2>
+					<pre><code class="hljs js">...</code></pre>
+				<hr>
+
+			</div>
+		</div>
+	</div>	
+</div>	
+		
+<div class="row">
+	<div class="col-md-12">
+		<div class="module">
+			<div class="heading">
+				<h1>Labels and Inputs</h1>
+			</div>
+			<div class="module-content">
+				<h2>Description</h2>
+					<p>Every <code>label</code> is given a class of <code>"control-label"</code>, and every <code>input</code> is given a class of <code>"form-control"</code>. Each of these matching pairs will be wrapped in a <code>div class="form-group"</code>. Ensure that each <code>label</code> has a <code>for</code> attribute that corresponds to its input's <code>name</code> attribute. This match is necessary for both accessibility and back end functionality.</p>
+				<hr>
+				<h2>Example</h2>
+					<form action="" class="form-horizontal">
+						<div class="form-group">
+							<div class="col-md-3">
+								<label for="text" class="control-label">Text Label:</label>
+							</div>
+							<div class="col-md-9">
+								<input type="text" name="text" class="form-control" placeholder="Example Text Input" tab-index="102">
+							</div>
+						</div>
+						<hr>
+
+						<div class="form-group">
+							<div class="col-md-3">
+								<label for="search" class="control-label">Search Label:</label>
+							</div>
+							<div class="col-md-9">
+								<input type="search" name="text" class="form-control" placeholder="Example Search Input" tab-index="103">
+							</div>
+						</div>
+						<hr>
+
+						<div class="form-group">
+							<div class="col-md-3">
+								<label for="search" class="control-label">Search Label:</label>
+							</div>
+							<div class="col-md-9">
+								<input type="search" name="text" class="form-control" placeholder="Example Search Input" tab-index="103">
+							</div>
+						</div>
+						<hr>
+
+					</form>
+					
+				<h2>Accessibility</h2>
+					<p>Labels on the left serve as the question, allowing the decision on the right to make more sense. Consistent use of <code>for</code> and <code>name</code> attributes will further increase accessibility. Additionally, all input fields must include a <code>tab-index</code> attribute.</p>
+				<hr>
+				<h2>Markup:HTML</h2>
+					<pre><code class="hljs html">&lt;form action=&quot;&quot; class=&quot;form-horizontal&quot;&gt;
+	&lt;div class=&quot;form-group&quot;&gt;
+		&lt;div class=&quot;col-md-3&quot;&gt;
+			&lt;label for=&quot;text&quot; class=&quot;control-label&quot;&gt;Example Label:&lt;/label&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;col-md-9&quot;&gt;
+			&lt;input type=&quot;text&quot; name=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Example Text Input&quot; tab-index=&quot;102&quot;&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;hr&gt;
+&lt;/form&gt;
+</code></pre>
+				<h2>Markup:CSS (.LESS)</h2>
+					<pre><code class="hljs css">...</code></pre>
+				<h2>Markup:JavaScript</h2>
+					<pre><code class="hljs js">...</code></pre>
+				<hr>
+			</div>
+		</div>	
+	</div>	
+</div>
+	
+<div class="row">
+	<div class="col-md-12">
+		<div class="module">
+			<div class="heading">
+				<h1>Add File Input Button</h1>
+			</div>
+			<div class="module-content">
+				<h2>Description</h2>
+					<p>Our Add File button is built by making the default <code>input type="file"</code> invisible and placing a background image sprite underneath it. It is a fixed width and height, please do not attempt to resize.</p>
+				<hr>
+				<h2>Example</h2>
+				<form action="" class="form-horizontal">
+					<div class="form-group">
+						<div class="col-md-3">
+							<label for="addfile" class="control-label">Attach a File:</label>
+						</div>
+						<div class="col-md-9">
+							<div class="add-file">
+								<input type="file" name="addfile" class="form-control">
+							</div>
+						</div>
+					</div>
+				</form>
+					
+				<hr>
+				<h2>Accessibility</h2>
+					<p>The default functionality of these inputs is retained. Only the graphic is changed. A :focus style must be applied for keyboard access.</p>
+				<hr>
+				<h2>Markup:HTML</h2>
+					<pre><code class="hljs html">&lt;form action=&quot;&quot; class=&quot;form-horizontal&quot;&gt;
+	&lt;div class=&quot;form-group&quot;&gt;
+		&lt;div class=&quot;col-md-3&quot;&gt;
+			&lt;label for=&quot;addfile&quot; class=&quot;control-label&quot;&gt;Attach a File:&lt;/label&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;col-md-9&quot;&gt;
+			&lt;div class=&quot;add-file&quot;&gt;
+				&lt;input type=&quot;file&quot; name=&quot;addfile&quot; class=&quot;form-control&quot;&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/form&gt;</code></pre>
+				<h2>Markup:CSS (.LESS)</h2>
+					<pre><code class="hljs css">...</code></pre>
+				<h2>Markup:JavaScript</h2>
+					<pre><code class="hljs js">...</code></pre>
+				<hr>
+			</div>
+		</div>	
+	</div>	
+</div>
+
+		
+<div class="row">
+	<div class="col-md-12">
+		<div class="module">
+			<div class="heading">
+				<h1>Custom Radio Buttons and Checkboxes</h1>
+			</div>
+			<div class="module-content">
+				
+			</div>
+		</div>	
+	</div>	
+</div>
+
+
+
+
+
+
+
+
+
+				<h2>Description</h2>
+				<p>Form pages will all typically follow a 1/4 - 3/4 layout rule. At smaller screen sizes, they will collapse to their own row unless specifically told not to. The <code>form</code> tag will sit just inside the <code>&lt;div class="module-content"&gt;</code> div, and will be closed just before the <code>&lt;div class="module-content"&gt;</code> div is closed.</p>
+				<p>
+					<pre><code>&lt;div class=&quot;module-content&quot;&gt;
+  &lt;form action=&quot;&quot; role=&quot;form&quot; class=&quot;form-horizontal&quot;&gt;
+    &lt;!-- form content goes here --&gt; 
+  &lt;/form&gt; 
+&lt;/div&gt;&lt;!-- /module-content --&gt;</code></pre>
+				</p>
+				<hr>
+				<h2>Text Inputs and Labels</h2>
+				<p>Each row of a form will be wrapped in a <code>&lt;div class="form-group"&gt;</code> and will have labels on the left in a <code>&lt;div class="col-md-3"&gt;</code> and the input tag on the right inside a <code>&lt;div class="col-md-9"&gt;</code>. After each form group div, insert an <code>&lt;hr&gt;</code> tag. Currently, the status classes are being applied to each row's <code>&lt;div class="form-group"&gt;</code> wrapper. These haven't been mocked up in an actual layout yet, so this structure will likely change.</p>
+				<p>
+					<pre><code>&lt;div class=&quot;form-group&quot;&gt;
+  &lt;div class=&quot;col-md-3&quot;&gt;
+    &lt;label for=&quot;text&quot; class=&quot;control-label&quot;&gt;Text - Active:&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-md-9&quot;&gt;
+    &lt;input type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;</code></pre>
+				</p>
+				<form action="" role="form" class="form-horizontal">
+					<div class="form-group">
+						<div class="col-md-3">
+							<label for="text" class="control-label">Text - Active:</label>
+						</div>
+						<div class="col-md-9">
+							<input type="text" class="form-control">
+						</div>
+					</div>
+					<hr>
+					<div class="form-group has-success">
+						<div class="col-md-3">
+							<label for="text" class="control-label">Text - Accepted:</label>
+						</div>
+						<div class="col-md-9">
+							<input type="text" class="form-control">
+						</div>
+					</div>
+					<hr>
+					<div class="form-group has-error">
+						<div class="col-md-3">
+							<label for="text" class="control-label">Text - Required:</label>
+						</div>
+						<div class="col-md-9">
+							<input type="text" class="form-control">
+						</div>
+					</div>
+					<hr>
+					<div class="form-group has-warning">
+						<div class="col-md-3">
+							<label for="text" class="control-label">Text - Warning:</label>
+						</div>
+						<div class="col-md-9">
+							<input type="text" class="form-control">
+						</div>
+					</div>
+					<hr>
+					<div class="form-group">
+						<div class="col-md-3">
+							<label for="search" class="control-label">Search:</label>
+							<p><small>Updated search input coming soon.</small></p>
+						</div>
+						<div class="col-md-9">
+							<input type="search" class="form-control">
+						</div>
+					</div>	
+					<hr>
+					<div class="form-group">
+						<div class="col-md-3">
+							<label for="email" class="control-label">Email:</label>
+						</div>
+						<div class="col-md-9">
+							<input type="email" class="form-control">
+						</div>
+					</div>
+					<hr>
+					<div class="form-group">
+						<h2>Add File / input[type="file"]</h2>
+						
+						<p>
+							<pre><code></code></pre>
+						</p>
+						
+						
+					</div>	
+					<hr>
+					<h2>Radio Buttons and Checkboxes</h2>
+					<p>These two elements are highly customized, utilize some very modern CSS pseudo-classes, and must retain this HTML structure to function properly.</p>
+					<p>
+						<pre><code>&lt;div class=&quot;form-group&quot;&gt;
+  &lt;div class=&quot;radio&quot;&gt;
+    &lt;input type=&quot;radio&quot; id=&quot;radio1&quot; name=&quot;options&quot; value=&quot;radio1&quot;&gt;
+    &lt;label for=&quot;radio1&quot;&gt;Option 1&lt;/label&gt;&lt;br&gt;
+    &lt;input type=&quot;radio&quot; id=&quot;radio2&quot; name=&quot;options&quot; value=&quot;radio2&quot;&gt;
+    &lt;label for=&quot;radio2&quot;&gt;Option 2&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-group&quot;&gt;
+  &lt;div class=&quot;checkbox&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;checkbox1&quot; name=&quot;options&quot; value=&quot;checkbox1&quot;&gt;
+    &lt;label for=&quot;checkbox1&quot;&gt;Checkbox Option 1&lt;/label&gt;&lt;br&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;checkbox2&quot; name=&quot;options&quot; value=&quot;checkbox2&quot;&gt;
+    &lt;label for=&quot;checkbox2&quot;&gt;Checkbox Option 2&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+					</p>
+					<div class="form-group">
+						<div class="radio">
+							<input type="radio" id="radio1" name="options" value="radio1">
+							<label for="radio1">Option 1</label><br>
+							<input type="radio" id="radio2" name="options" value="radio2">
+							<label for="radio2">Option 2</label>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="checkbox">
+							<input type="checkbox" id="checkbox1" name="options" value="checkbox1">
+							<label for="checkbox1">Checkbox Option 1</label><br>
+							<input type="checkbox" id="checkbox2" name="options" value="checkbox2">
+							<label for="checkbox2">Checkbox Option 2</label>
+						</div>
+					</div>
+					
+					<hr>
+					<h2>Textarea</h2>
+					<p>Textareas receive the same layout format as labels and text inputs. The RichText bar across the top is optional.</p>
+					<p>
+						<pre><code>&lt;div class=&quot;form-group&quot;&gt; 
+  &lt;div class=&quot;col-md-3&quot;&gt;
+    &lt;label for=&quot;textarea&quot;&gt;Textarea:&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-md-9&quot;&gt;
+    &lt;div class=&quot;richtext&quot;&gt;
+      &lt;a href=&quot;#trigger-richtext-plugin&quot; class=&quot;icon-richtext&quot;&gt;&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;textarea name=&quot;textarea&quot; id=&quot;textarea&quot;&gt;&lt;/textarea&gt;
+  &lt;/div&gt; 
+&lt;/div&gt;</code></pre>
+					</p>
+					<div class="form-group">	
+						<div class="col-md-3">
+							<label for="textarea">Textarea:</label>
+						</div>
+						<div class="col-md-9">
+							<div class="richtext">
+								<a href="#trigger-richtext-plugin" class="icon-richtext"></a>
+							</div>
+							<textarea name="textarea" id="textarea"></textarea>
+						</div>	
+					</div>	
+
+				</form>
+			</div>
+			

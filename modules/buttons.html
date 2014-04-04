@@ -1,0 +1,176 @@
+<div class="row">
+	<div class="col-md-12 col-sm-12">
+		<div class="module">
+			<div class="heading">
+				<h1>Default Buttons</h1>
+			</div>
+			<div class="module-content">
+				<div class="row">
+					<div class="col-md-12">
+						<h2>Description</h2>
+						<p>It is preferred to use button tags over <code>input</code> or <code>a</code> tags for button elements. Each will function similarly, but for the sake of consistency, please use the <code>button</code> tag when possible. All buttons are given the <code>.btn</code> class and either <code>.btn-default</code>, or <code>.btn-submit</code> class. The <code>.btn-submit</code> class may only be used for 'final actions' within a user activity.</p>
+						<p>The <code>.btn-submit</code> class may only be used for 'final actions' within a user activity.</p>
+						<p>Buttons may utilize class <code>flush</code> to remove all margins. For instance, if a button needed to sit on the right side of a module and line up with other elements, this class would remove the 10px of right margin, allowing it to be positioned correctly.</p>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-12">
+						<h2>Accessibility</h2>
+						<p>Every element with a <code>.btn</code> class should also receive a <code>role="button"</code> attribute. For actual button elements this is redundant, but an input or anchor tag using this class will be more clear.</p>
+					</div>
+				</div>
+				<hr>
+				
+				<h2>Example</h2>
+					<a href="#" role="button" class="btn btn-default">Default Button</a>
+					<button href="#" role="button" class="btn btn-default">Default Button</button>
+					<input type="button" role="button" value="Default Button" class="btn btn-default"> 
+				<hr>
+
+				<div class="row">	
+					<div class="col-md-12">
+						<h2>Markup:HTML</h2>
+						<pre><code>&lt;a href=&quot;#&quot; role=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;Default Button&lt;/a&gt;
+&lt;button href=&quot;#&quot; role=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;Default Button&lt;/button&gt;
+&lt;input type=&quot;button&quot; role=&quot;button&quot; value=&quot;Default Button&quot; class=&quot;btn btn-default&quot;&gt;
+</code></pre>
+						<h2>Markup:CSS (.LESS)</h2>
+						<pre><code class="hljs css"> ... </code></pre>
+						<h2>Markup:JavaScript</h2>
+							<p>There is no JavaScript used for buttons.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+</div>
+
+
+			
+<div class="row">
+	<div class="col-md-12">
+		<div class="module">
+			<div class="heading">
+				<h1>Submit Buttons</h1>
+			</div>
+			<div class="module-content">
+				<h2>Description</h2>
+					<p>These style of buttons represent a final action in a task. There will never be more than one submit button on a page, or in a task.</p>
+				<hr>
+				
+				<h2>Accessibility</h2>	
+					<p>Every element with a <code>.btn</code> class should also receive a <code>role="button"</code> attribute. For actual button elements this is redundant, but an input or anchor tag using this class will more clear.</p>
+				<hr>
+				
+				<h2>Example</h2>	
+					<a href="#" role="button" class="btn btn-submit">Submit</a> 
+					<button role="button" class="btn btn-submit">Submit</button>
+					<input role="button" type="button" value="Submit" class="btn btn-submit">
+				<hr>
+
+				<h2>Markup:HTML</h2>
+				<pre><code>&lt;a href=&quot;#&quot; role=&quot;button&quot; class=&quot;btn btn-submit&quot;&gt;Submit&lt;/a&gt; 
+&lt;button role=&quot;button&quot; class=&quot;btn btn-submit&quot;&gt;Submit&lt;/button&gt;
+&lt;input role=&quot;button&quot; type=&quot;button&quot; value=&quot;Submit&quot; class=&quot;btn btn-submit&quot;&gt;</code></pre>
+				
+				<h2>Markup:CSS (.LESS)</h2>
+				<pre><code class="hljs css"> ... </code></pre>
+			</div>
+		</div>	
+	</div>	
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="module">
+			<div class="heading">
+				<h1>Previous and Next Buttons</h1>
+			</div>
+			<div class="module-content">
+				<h2>Description</h2>
+					<p>Our custom previous and next buttons use a background image to achieve the directional arrow. All previous and next buttons will be the same width and height to accomodate these images. Please do not attempt to resize them.</p>
+				<hr>
+				<h2>Example</h2>
+					<a href="#" role="button" class="btn btn-previous">Previous</a>
+					<a href="#" class="btn btn-next">Next</a>
+				<hr>
+				<h2>Accessibility</h2>
+					<p>Use of <code>role="button"</code> is it for now.</p>
+				<hr>
+				<h2>Markup:HTML</h2>
+					<pre><code class="hljs html">&lt;a href=&quot;#&quot; role=&quot;button&quot; class=&quot;btn btn-previous&quot;&gt;Previous&lt;/a&gt;
+&lt;a href=&quot;#&quot; role=&quot;button&quot; class=&quot;btn btn-next&quot;&gt;Next&lt;/a&gt;</code></pre>
+				<h2>Markup:CSS (.LESS)</h2>
+					<pre><code class="hljs css">...</code></pre>
+				<h2>Markup:JavaScript</h2>
+					<pre><code class="hljs js">...</code></pre>
+				<hr>
+			</div>
+		</div>	
+	</div>	
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="module">
+			<div class="heading">
+				<h1>Cancel, Delete, Clear Buttons / Links</h1>
+			</div>
+			<div class="module-content">
+				<h2>Description</h2>
+					<p>These will typically be paired with Submit buttons. They receive their own classes in case we decide to style them differently in the future. All three classes receive the same CSS currently.</p>
+				<hr>
+				<h2>Example</h2>
+					<a href="#" rel="cancel" class="link-cancel">Cancel</a>
+					<br>
+					<a href="#" rel="discard" class="link-discard">Discard</a>
+					<br>
+					<a href="#" rel="clear" class="link-clear">Clear</a>
+				<hr>
+				<h2>Accessibility</h2>
+					<p>Each of these links is given a semantic class of <code>link-buttonname</code> as well as a <code>rel</code> value matching the text of the link.</p>
+				<hr>
+				<h2>Markup:HTML</h2>
+					<pre><code class="hljs html">&lt;a href=&quot;#&quot; rel=&quot;cancel&quot; class=&quot;link-cancel&quot;&gt;Cancel&lt;/a&gt;
+&lt;a href=&quot;#&quot; rel=&quot;discard&quot; class=&quot;link-discard&quot;&gt;Discard&lt;/a&gt;
+&lt;a href=&quot;#&quot; rel=&quot;clear&quot; class=&quot;link-clear&quot;&gt;Clear&lt;/a&gt;</code></pre>
+				<h2>Markup:CSS (.LESS)</h2>
+					<pre><code class="hljs css">...</code></pre>
+				<h2>Markup:JavaScript</h2>
+					<pre><code class="hljs js">...</code></pre>
+				<hr>
+
+			</div>
+		</div>	
+	</div>	
+</div>
+
+		
+<div class="row">
+	<div class="col-md-12">
+		<div class="module">
+			<div class="heading">
+				<h1></h1>
+			</div>
+			<div class="module-content">
+				<h2>Description</h2>
+					<p>Bigger green buttons used for creating a new report or some object</p>
+				<hr>
+				<h2>Example</h2>
+					<button role="button" class="btn btn-create icon-plus"> Create New Report</button>
+				<hr>
+				<h2>Accessibility</h2>
+					<p></p>
+				<hr>
+				<h2>Markup:HTML</h2>
+					<pre><code class="hljs html">&lt;button role=&quot;button&quot; class=&quot;btn btn-create icon-plus&quot;&gt; Create New Report&lt;/button&gt;</code></pre>
+				<h2>Markup:CSS (.LESS)</h2>
+					<pre><code class="hljs css">...</code></pre>
+				<h2>Markup:JavaScript</h2>
+					<pre><code class="hljs js">...</code></pre>
+				<hr>
+			</div>
+		</div>	
+	</div>	
+</div>

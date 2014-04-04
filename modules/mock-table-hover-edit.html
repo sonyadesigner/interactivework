@@ -1,0 +1,175 @@
+<div class="row">
+	<div class="col-md-12 col-xs-12">
+		<div class="module">
+			<div class="heading">
+				<h1>Table Hover to show Edit</h1>
+			</div>
+			<div class="module-content">
+
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#tab-page-one" data-toggle="tab">Access</a></li>
+					<li><a href="#tab-page-two" data-toggle="tab">Terminology</a></li>
+					<li><a href="#tab-page-three" data-toggle="tab">Feedback Setting</a></li>
+					<li><a href="#tab-page-four" data-toggle="tab">Assessment Period</a></li>
+					<li><a href="#tab-page-four" data-toggle="tab">Task Guide</a></li>
+					<li><a href="#tab-page-four" data-toggle="tab">Plan Submission</a></li>
+					<li><a href="#tab-page-four" data-toggle="tab">Lock/Unlock a Plan</a></li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane fade active in" id="tab-page-one">
+						<h2>Manage Access Settings</h2>
+						<div class="row">
+							<div class="col-md-offset-7 col-md-3">
+								<div class="form-group">
+									<label for="search" class="sr-only">Search:</label>
+									<input type="search" name="search" class="input-inline" placeholder="Search for a user, a role, a group or an organization">
+								</div>
+							</div>
+							<div class="col-md-2">
+								<div class="form-group custom-select">
+									<select name="user-groups" id="user-groups" class="form-control"  tabindex="2">
+										<option value="a1">Filter 1</option>
+										<option value="a2">Filter 2</option>
+										<option value="a2">Filter 3</option>
+										<option value="a2">Filter 4</option>
+										<option value="a3">Filter 5</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="table-wrap">
+						<table class="table table-striped table-hover table-edit">
+							<thead>
+								<tr>
+									<th></th>
+									<th scope="col">Planning Organization</th>
+									<th scope="col">Accessible To</th>
+								</tr>
+							</thead>
+							<tr>
+								<td><a class="icon-edit" href="#" data-toggle="modal" data-target="#edit-modal-1"></a></td>
+								<td>School of Education</td>
+								<td>Monica Defendorf (can edit), Holly Martin (can edit), Dana Peterson (can view)</td>
+							</tr>
+							<tr>
+								<td><a class="icon-edit" href="#" data-toggle="modal" data-target="#edit-modal-1"></a></td>
+								<td>Bilingual Education Program</td>
+								<td>Holly Martin (can edit), Austen Adair (can view), Brent (can edit)</td>
+							</tr>
+							<tr>
+								<td><a class="icon-edit" href="#" data-toggle="modal" data-target="#edit-modal-1"></a></td>
+								<td>Early Childhood Program</td>
+								<td>Nicole Taylor (can edit)</td>
+							</tr>
+							<tr>
+								<td><a class="icon-edit" href="#" data-toggle="modal" data-target="#edit-modal-1"></a></td>
+								<td>School of Engineering</td>
+								<td>Megan Connolly (can edit)</td>
+							</tr>
+							<tr>
+								<td><a class="icon-edit" href="#" data-toggle="modal" data-target="#edit-modal-1"></a></td>
+								<td>School of Medicine</td>
+								<td>Chen Liang (can view)</td>
+							</tr>
+							<tr>
+								<td><a class="icon-edit" href="#" data-toggle="modal" data-target="#edit-modal-1"></a></td>
+								<td>School of Business</td>
+								<td>Makynna Hood (can edit)</td>
+							</tr>
+							<tr>
+								<td><a class="icon-edit" href="#" data-toggle="modal" data-target="#edit-modal-1"></a></td>
+								<td>School of Environmental Design</td>
+								<td>Pari Razmand (can edit)</td>
+							</tr>
+							<tr>
+								<td><a class="icon-edit" href="#" data-toggle="modal" data-target="#edit-modal-1"></a></td>
+								<td>School of Information</td>
+								<td>Lehua Gray (can view)</td>
+							</tr>
+							
+						</table>
+					</div>
+				</div>
+			</div>		
+		</div>
+	</div>
+</div>
+
+<!-- =================================== -->
+<!-- modal    // #edit-modal-1 //       -->
+<div class="modal fade" id="edit-modal-1" tab-index="-1" role="dialog" aria-labelledby="edit-modal" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="close" type="button" data-dismiss="modal" aria-hidden="true"><span class="icon-close"></span></div>
+				<h4>School of Education</h4>
+			</div>
+			<div class="modal-body">
+				<form action="#" class="form-horizontal">
+					<div class="row">
+						<div class="col-md-5">
+							<label for="person-resp">Responsible Person for Feedback</label>
+						</div>
+						<div class="col-md-6 col-md-offset-1">
+							<input type="text" name="person-resp" id="person-resp">
+						</div>
+					</div>
+					<hr>
+					<div class="row">
+						<div class="col-md-5">
+							<label for="feedback-form">Feedback Form</label>
+							<p><span class="icon-close-circle"></span> Form Style 1</p>	
+						</div>
+						<div class="col-md-6 col-md-offset-1">
+							<input type="text" name="feedback-form" id="feedback-form">
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<hr>
+				<button class="btn btn-default" data-dismiss="modal">Close</button>
+				<button class="btn btn-submit" type="submit">Submit</button>
+			</div>
+		</div>
+	</div>
+</div><!-- /modal -->
+
+<!-- =================================== -->
+<!-- modal    // #edit-modal-2//       -->
+<div class="modal fade" id="edit-modal-2" tab-index="-1" role="dialog" aria-labelledby="edit-modal" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="close" type="button" data-dismiss="modal" aria-hidden="true"><span class="icon-close"></span></div>
+				<h4>Feedback Form</h4>
+			</div>
+			<div class="modal-body">
+				<form action="#" class="form-horizontal">
+					<div class="row">
+						<div class="col-md-5">
+							<label for="fb-1">Feedback Item 1: </label>
+						</div>
+						<div class="col-md-6 col-md-offset-1">
+							<textarea name="fb-1" id="fb-1" autofocus="autofocus"></textarea>
+						</div>
+					</div>
+					<hr>
+					<div class="row">
+						<div class="col-md-5">
+							<label for="fb-2">Feedback Item 2: </label>
+						</div>
+						<div class="col-md-6 col-md-offset-1">
+							<textarea name="fb-2" id="fb-2"></textarea>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<hr>
+				<button class="btn btn-default" data-dismiss="modal">Close</button>
+				<button class="btn btn-submit" type="submit">Submit</button>
+			</div>
+		</div>
+	</div>
+</div><!-- /modal -->

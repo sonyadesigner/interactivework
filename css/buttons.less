@@ -1,0 +1,159 @@
+/* buttons */
+button,
+button.btn,
+.btn,
+a.btn,
+button.btn-default,
+.btn-default,
+a.btn-default,
+input[type="button"],
+input[type="button"].btn,
+input[type="button"].btn-default, {
+	line-height: 1.5em;
+	.border-radius(0.4166em);
+	.user-select();
+	padding: 2px 8px;
+	color: @gray1;
+	margin: 0 10px 0 0;
+	border: 1px solid @gray3;
+	border-color: @gray3;
+	.gradient(@gradient-start, @gradient-end);
+	&:hover,
+	&:active,
+	&:focus {
+		.transition(150ms);
+		outline: none;
+		color: @gray1;
+		border: 1px solid @gray2 * 1.2;
+		border-color: @gray2 * 1.2;
+	}
+	&:active {
+		.gradient(@gradient-end, @gradient-start);
+		.inner-shadow(0, 1px, 2px, 1px, 0.15);
+	}
+}
+input[type="submit"],
+button[type="submit"],
+a[type="submit"],
+a.btn-submit,
+a.btn.btn-submit,
+button.btn-submit,
+button.btn.btn-submit,
+input.btn-submit,
+input.btn.btn-submit {
+	.border-radius(5px);
+	.gradient(@gradient-green-start, @gradient-green-end);
+	.user-select();
+	color:@white;
+	border: 1px solid @green-border;
+	border-color: @green-border;
+	margin: 0 10px 0 0;
+	padding: 2px 8px;
+	&:hover,
+	&:active,
+	&:focus {
+		color: @white;
+		outline: none;
+		border: 1px solid @green-border;
+		border-color: @green-border;
+	}
+	&:active {
+		.gradient(@gradient-green-end, @gradient-green-start);
+		.inner-shadow(0, 1px, 2px, 1px, 0.15);
+	}
+}
+
+a.btn-next,
+button.btn-next,
+input.btn-next {
+	width: 62px;
+	height: 24px;
+	-webkit-background-size: 162px 54px;
+		background-size: 162px 54px;
+	background-image: url(../assets/ui/arrow-buttons.png);
+	background-position: -100px 0;
+	background-repeat: no-repeat;
+	border: 0 none;
+	text-align: left;
+	padding: 3px 0 0 12px;
+	.transition(0);
+	&:hover,
+	&:focus {
+		.transition(0);
+		background-color: transparent;
+		outline: none;
+		border: 0 none;
+	}
+	&:active {
+		width: 62px;
+		height: 24px;
+		-webkit-background-size: 162px 54px;
+		background-size: 162px 54px;
+		background-image: url(../assets/ui/arrow-buttons.png);
+		background-position: -100px -30px;
+		background-repeat: no-repeat;
+		border: 0 none;
+		text-align: left;
+		padding: 3px 0 0 12px;
+		.inner-shadow(0,0,0,0,0);
+	}
+}
+a.btn-previous,
+button.btn-previous,
+input.btn-previous {
+	width: 80px;
+	height: 24px;
+	-webkit-background-size: 162px 54px;
+	background-size: 162px 54px;
+	background-image: url(../assets/ui/arrow-buttons.png);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	border: 0 none;
+	text-align: left;
+	padding: 3px 0 0 20px;
+	.transition(0);
+	&:hover,
+	&:focus {
+		.transition(0);
+		background-color: transparent;
+		outline: none;
+		border: 0 none;
+	}
+	&:active {
+		width: 80px;
+		height: 24px;
+		-webkit-background-size: 162px 54px;
+		background-size: 162px 54px;
+		background-image: url(../assets/ui/arrow-buttons.png);
+		background-position: 0 -30px;
+		background-repeat: no-repeat;
+		border: 0 none;
+		text-align: left;
+		padding: 3px 0 0 20px;
+		.inner-shadow(0,0,0,0,0);
+	}
+}
+
+/*green create button*/
+.btn-create,
+a.btn-create,
+button.btn-create,
+input[type="button"].btn-create,
+.btn.btn-create,
+a.btn.btn-create,
+button.btn.btn-create,
+input[type="button"].btn.btn-create, {
+	background: @green;
+	color: @white;
+	font-size: 1.1666em;
+	padding: 4px 10px;
+	border: 1px solid @gray3;
+	.border-radius(0);
+}
+
+.flush,
+a.flush,
+button.flush,
+input[type="button"].flush {
+	margin: 0;
+}

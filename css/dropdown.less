@@ -1,0 +1,124 @@
+/*custom dropdown*/
+div.dropdown {
+	position: relative;
+	> button.btn.dropdown-toggle {
+		background: none !important; 
+		border: 1px solid @gray2;
+		padding: 4px 10px;
+		width: 100%;
+		text-align: left;
+		.drop-shadow(0,0,0,0,0);
+		> span.selection {
+			text-align: left;
+		}
+
+	}
+	ul.dropdown-menu {
+		width: 100%;
+		border-top: 0 none;
+		.drop-shadow(0,0,0,0,0);
+		border-color: @gray2;
+		.border-radiuses(0,5px, 5px, 0);
+		top: 26px;
+		max-height: 120px;
+		overflow-y: scroll;
+		> li a:link,
+		> li a:active,
+		> li a:visited,
+		> li a:hover {
+			padding: 4px 20px;
+			color: @gray1;
+		}
+		/* customizes scrollbars for webkit browsers, IE FF and Opera will use their default */
+		&::-webkit-scrollbar { 
+			background: transparent;  
+			width: 6px; 
+		}
+		&::-webkit-scrollbar-button { 
+			background: @gray2; 
+		}
+		&::-webkit-scrollbar-track { 
+			background: transparent;  
+		}
+		&::-webkit-scrollbar-track-piece { 
+			background: transparent;  
+		}
+		&::-webkit-scrollbar-thumb { 
+			background: @gray2; 
+			.border-radius(25px);  
+			border: 1px solid transparent;   
+		}
+		&::-webkit-scrollbar-corner { 
+			background: transparent;    
+		}
+		&::-webkit-resizer   {}
+		hr {
+			width: auto;
+			margin: 0 2px;
+
+		}
+	}
+	[class^="icon-"],
+	[class*=" icon-"] {
+		position: absolute;
+		right: 8px;
+		top: 50%;
+		margin-top: -4px;
+		font-size: 0.8333em;
+		pointer-events: none;
+	}
+
+
+	&.open {
+		> button.btn.dropdown-toggle {
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+			border-color: @gray2;
+			border-bottom: 1px solid @gray3;
+			>[class^="icon-"], [class*=" icon-"] {
+				font-size: 1.5em;
+				position: absolute;
+				top: 9px;
+				right: 5px;
+				color: @gray3;
+				.rotate(180deg);
+			}
+		}
+
+	}
+}
+
+
+/* native select dropdown */
+select,
+.form-control select {
+	appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+	.border-radius(5px) !important;
+	border:1px solid @gray2;
+	font-size: 1em;
+	padding: 0 10px;
+	-moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+	cursor: pointer;
+	&:focus {
+		outline: none;
+	}
+	&::-ms-expand {
+		display: none;
+	}
+
+}
+.custom-select {
+	position: relative;
+	.icon-arrow-down {
+		position: absolute;
+		right: 8px;
+		top: 50%;
+		margin-top: -4px;
+		font-size: 0.8333em;
+		pointer-events: none;
+	}
+}

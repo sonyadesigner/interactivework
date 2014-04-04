@@ -1,0 +1,334 @@
+@import 'lessmixins.less';
+
+/*mobile / tablet - all edit options are in dropdown*/
+div.module {
+	border-left: 10px solid @gray3;
+	border-right: 10px solid @gray3;
+	background: @white;
+	margin-bottom: 20px;
+	float: left;
+	width: 100%;
+	min-width: 545px;
+	z-index: 0;
+	&:after {
+			clear: both;
+		}
+
+	/* places a 10px padding on nested columns inside modules, unless they are full width */
+	[class^="col-"] + [class^="col-"], 
+	[class^="col-"] + [class*=" col-"],
+	[class*=" col-"] + [class^="col-"],
+	[class*=" col-"] + [class*=" col-"] {
+		padding-left: 10px;
+	}
+	[class="col-lg-12"], [class*=" col-lg-12"],
+	[class="col-md-12"], [class*=" col-md-12"],
+	[class="col-sm-12"], [class*=" col-sm-12"],
+	[class="col-xs-12"], [class*=" col-xs-12"] {
+		padding-left: 0 !important;
+	}
+	
+	div.module-content {
+		padding: 20px;
+		float: left;
+		width: 100%;
+		.box-sizing(border-box);
+	}
+
+	div.heading {
+		position: relative;
+		background: @secondary;
+		float: left;
+		width: 100%;
+		z-index: 1;
+
+		h1 {
+			max-width: 80%;
+			overflow-x: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+	
+		div.editing-options {
+			float:right;
+			width: auto;
+			max-width: 20%;
+			position: relative;
+
+			div.module-menu-bar {
+				float: left;
+				> ul {
+					> li {
+						float: left;
+						list-style-type: none;
+						line-height: 1em;
+						padding: 7px 0;
+						background: transparent;
+						cursor: pointer;
+						&:hover, &:active { background: @secondary-hover; }
+						&:first-child { 
+							a:link, a:visited, [class^="icon-"], [class*=" icon-"] {
+								border-left: 0 none;
+							}
+						}
+						> a:link, > a:visited, > [class^="icon-"], [class*=" icon-"]  {
+							display: block;
+							padding: 0 10px;
+							border-left: 1px solid rgba(255,255,255,0.5);
+							background: transparent;
+							color: @white;
+							font-size: 1em;
+						}
+						&.primary { display: none; }
+						&.secondary { display: none; }
+						&.module-menu-trigger { 
+							display: block; 
+							[class^="icon-"], [class*=" icon-"] { 
+								border-left: 0 none; 
+							}
+						}
+					}
+				}
+			}
+			div.module-menu-dropdown {
+				position: absolute;
+				top: 100%;
+				right:0;
+				height: 0;
+				.opacity(0);
+				&.show-menu {
+					height: auto;
+					.opacity(1);
+				}
+				> ul {
+					.drop-shadow();
+					margin: 0;
+					padding: 0;
+					> li {
+						float: none;
+						list-style-type: none;
+						line-height: 1em;
+						padding: 0 10px;
+						background: @white;
+						width: 100%;
+						&:hover, &:active { background: @gray3; }
+						&:first-child { 
+							a:link, a:visited, [class^="icon-"], [class*=" icon-"] {
+								border-left: 0 none;
+								border-top: 0 none;
+							}
+						}
+						> a:link, a:visited, [class^="icon-"], [class*=" icon-"]  {
+							display: block;
+							padding: 7px 0;
+							border-left: 0 none;
+							border-top: 1px solid @gray3;
+							background: transparent;
+							color: @gray1;
+							font-size: 1em;
+							cursor: pointer;
+						}
+						> [class^="icon-"], [class*=" icon-"] {
+							display: none;
+						}
+					}
+				}
+			}
+		}   /* editing-options */
+	}
+	div.module-submit {
+		float: right;
+	}
+	div.module-footer {
+		margin-top: 20px;
+	}
+}
+
+@media screen and (min-width: 960px) {
+	div.module {
+		div.heading {
+			h1 {
+				max-width: 50%;
+			}
+			div.editing-options {
+				max-width: 50%;
+				div.module-menu-bar {
+					> ul {
+						> li {
+							&.primary { display: block; }
+							&.secondary { display: none; }
+							&.module-menu-trigger { 
+								display: block; 
+								[class^="icon-"], [class*=" icon-"] { 
+									font-size: 1em;
+									line-height: 1;
+									padding: 0 5px;
+									border-left: 1px solid rgba(255,255,255,0.5); }
+								}
+						}
+					}
+				}
+				div.module-menu-dropdown {	
+					height: 0;
+					.opacity(0);
+					&.show-menu {
+						height: auto;
+						.opacity(1);
+					}				
+					> ul {
+						>li.primary + .secondary { 
+							a:link, a:visited, [class^="icon-"], [class*=" icon-"] {
+								border-top: 0 none;
+							}
+						}
+						> li {
+							&.primary { display: none; }
+							&.secondary { 
+								display: block; 
+								&.first {
+									a:link, a:visited, [class^="icon-"], [class*=" icon-"] {
+										border-top: 0 none;
+									}
+									
+								}
+							}							
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (min-width: 1200px) {
+	div.module {
+		div.heading {
+			h1 {
+				max-width: 40%;
+			}
+			div.editing-options {
+				max-width: 60%;
+				div.module-menu-bar {
+					> ul {
+						> li {
+							&.primary { display: block; }
+							&.secondary { display: block; }
+							&.module-menu-trigger { 
+								display: none; 
+								[class^="icon-"], [class*=" icon-"] { 
+									border-left: 1px solid rgba(255,255,255,0.5); }
+								}
+						}
+					}
+				}
+				div.module-menu-dropdown {		
+					display: none;			
+					> ul {
+						> li {
+							&.primary { display: none; }
+							&.secondary { display: block; }
+							&.module-menu-trigger { 
+								display: none; 
+								[class^="icon-"], [class*=" icon-"] { 
+									border-left: 1px solid rgba(255,255,255,0.5); }
+								}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/*mobile / tablet -  half-width modules only have the dropdown menu */
+div.col-md-6,
+div.col-sm-6,
+div.col-lg-6,
+div.col-xs-6 {
+	> div.module {
+
+		div.heading {
+
+			div.editing-options {
+
+				div.module-menu-dropdown {
+					position: absolute;
+					top: 100%;
+					right:0;
+					height: 0;
+					.opacity(0);
+					&.show-menu {
+						height: auto;
+						.opacity(1);
+					}
+					> ul {
+						.drop-shadow();
+						margin: 0;
+						padding: 0;
+						> li {
+							float: none;
+							list-style-type: none;
+							line-height: 1em;
+							padding: 0 10px;
+							background: @white;
+							width: 100%;
+							&:hover, &:active { background: @gray3; }
+							&:first-child { 
+								a:link, a:visited, [class^="icon-"], [class*=" icon-"] {
+									border-left: 0 none;
+									border-top: 0 none;
+								}
+							}
+							> a:link, a:visited, [class^="icon-"], [class*=" icon-"]  {
+								display: block;
+								padding: 7px 0;
+								border-left: 0 none;
+								border-top: 1px solid @gray3;
+								background: transparent;
+								color: @gray1;
+								font-size: 1em;
+								cursor: pointer;
+							}
+							> [class^="icon-"], [class*=" icon-"] {
+								display: none;
+							}
+						}
+					}
+				}
+			}   /* editing-options */
+		}
+	}
+}
+
+/*remove the 10px padding from consecutive medium columns when they collapse*/
+@media screen and (max-width: 960px){
+	div.module {
+		[class^="col-md"] + [class^="col-md"], 
+		[class^="col-md"] + [class*=" col-md"],
+		[class*=" col-md"] + [class^="col-md"],
+		[class*=" col-md"] + [class*=" col-md"] {
+			padding-left: 0;
+		}
+		[class="col-lg-12"], [class*=" col-lg-12"],
+		[class="col-md-12"], [class*=" col-md-12"] {
+			padding-left: 0 !important;
+		}
+	}
+}
+
+/*remove the 10px padding from consecutive small columns when they collapse*/
+@media screen and (max-width: 640px){
+	div.module {
+		[class^="col-sm"] + [class^="col-sm"], 
+		[class^="col-sm"] + [class*=" col-sm"],
+		[class*=" col-sm"] + [class^="col-sm"],
+		[class*=" col-sm"] + [class*=" col-sm"] {
+			padding-left: 0;
+		}
+		[class="col-lg-12"], [class*=" col-lg-12"],
+		[class="col-md-12"], [class*=" col-md-12"] {
+			padding-left: 0 !important;
+		}
+	}
+}
+

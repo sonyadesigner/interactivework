@@ -1,0 +1,48 @@
+@import 'lessmixins.less';
+
+footer {
+	position: relative;
+	float: left;
+	z-index: 10;
+	height: @footer-height;
+	background: @gray2;
+	padding: 10px;
+	width: 100%;
+	div.copyright {
+		float: right;
+		margin: 0 60px 0 0;
+		p {
+			color: @white;
+			font-weight: 300;
+			margin: 0;
+			padding: 0;
+		}
+	}
+	div.return-to-top {
+		position: fixed;
+		bottom:45px;
+		right: 20px;
+		cursor: pointer;
+		.opacity(0);
+		.icon-arrow-up {
+			.border-radius(100%);
+			.opacity(0.6);
+			background: @gray2;
+			color: @white;
+			padding: 7px 8px;
+			font-size: 1.5em;
+			.transition(100ms);
+			&:hover, &:active {
+				.opacity(0.8);
+			}
+		}
+	}
+}
+@media screen and (max-width:960px) {
+	footer {
+		clear: both;
+		position: relative;
+		float: none;
+		margin-top: 0;
+	}
+}

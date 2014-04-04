@@ -1,0 +1,44 @@
+<div class="row">
+	<div class="col-md-12">
+		<div class="module">
+			<div class="heading"><h1>Fluid Grid</h1></div>
+			<div class="module-content">
+				<h2>Markup</h2>
+				<p>Our new UI utilizes Bootstrap's 12-column fluid grid. This means that each row is divided into 12 equal columns, allowing us to create consistent, yet dynamic layouts.</p>
+				<p>Each row is wrapped in <code>&lt;div class=&quot;row&quot;&gt;&lt;/div&gt;</code>. Set the width using <code>&lt;div class=&quot;col-md-12&quot;&gt;</code> where the '12' can be anything between 1 and 12. Each row will be made up of these columns adding up to 12.</p>
+				<p>Our columns have a 0 pixel gutter, unlike the default Bootstrap grid. To create some separation for inner-module layouts, a 10 pixel padding is applied to the second column of every row.</p>
+				<hr>
+				<h2>Responsive Grid</h2>
+				<p>For the most part, we will use the medium column grid. This affects the grid when the screen width is above a certain breakpoint. At or below that breakpoint each column will collapse to become a full width row.</p>
+				<p>Medium columns collapse at 960px. The 10px left padding is then removed so that all columns line up properly.</p>
+				<p>Background, padding, and borders below are for demo purposes only.</p>
+				<div class="grid-display">
+					<div class="row">
+						<div class="col-md-3">col-md-3</div>
+						<div class="col-md-3">col-md-3</div>
+						<div class="col-md-3">col-md-3</div>
+						<div class="col-md-3">col-md-3</div>
+					</div>
+					<hr>
+					<p>Small columns collapse at 640px. The 10px left padding is then removed so that all columns line up properly.</p>
+					<div class="row">
+						<div class="col-sm-3">col-sm-3</div>
+						<div class="col-sm-3">col-sm-3</div>
+						<div class="col-sm-3">col-sm-3</div>
+						<div class="col-sm-3">col-sm-3</div>
+					</div>
+					<hr>
+					<p>To control how columns collapse, use multiple column classes. For example, at 800px+ we can have a 3/4 - 1/4 layout, but below 800px, we can have a 1/4 - 3/4 layout. How these columns collapse will be decided by the designers until a set of rules are created.</p>
+					<div class="row">
+						<div class="col-md-9 col-sm-3">col-md-9 col-sm-3</div>
+						<div class="col-md-3 col-sm-9">col-md-3 col-sm-9</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-sm-4">col-md-6 col-sm-4</div>
+						<div class="col-md-6 col-sm-8">col-md-6 col-sm-8</div>
+					</div>
+				</div>	
+			</div>
+		</div>	
+	</div>	
+</div>

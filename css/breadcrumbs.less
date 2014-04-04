@@ -1,0 +1,30 @@
+ol.breadcrumb,
+ul.breadcrumb {
+	margin-bottom: 20px;
+	margin-top: 0;
+	margin-left: 10px;
+	list-style: none;
+	background-color: transparent;
+	border-radius: 0;
+	padding: 0;
+
+	a:link, a:visited, 
+	a:hover, a:active, 
+	li {
+		font-weight: 300;
+		color:@gray1;
+		text-decoration: none;
+		line-height: 12px;
+	}
+	> li.active {
+		font-weight: 700;
+		color:@gray1;
+		text-decoration: none;
+	}
+	
+}
+.breadcrumb>li+li:before {
+	content:"\003e"; 
+	color: @gray1;
+	font-weight: 300;
+}
