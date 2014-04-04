@@ -42,7 +42,7 @@ if($user == "uiux"
 
 				<div class="user-preferences drawer-trigger" data-utility="#preferences">
 					<span class="icon-user"></span>
-					<p>Hi, Tk20Username</p>
+					<p>Hi, Sonu Arora</p>
 					<span class="user-status-caret caret-down"></span>
 				</div>
 			</div>
